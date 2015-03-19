@@ -175,6 +175,36 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 </package>
+<package name="SOIC-20">
+<smd name="1" x="-5.715" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="2" x="-4.445" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="3" x="-3.175" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="4" x="-1.905" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="5" x="-0.635" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="6" x="0.635" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="7" x="1.905" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="8" x="3.175" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="9" x="4.445" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="10" x="5.715" y="-4.76225" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="11" x="5.715" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="12" x="4.445" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="13" x="3.175" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="14" x="1.905" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="15" x="0.635" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="16" x="-0.635" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="17" x="-1.905" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="18" x="-3.175" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="19" x="-4.445" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<smd name="20" x="-5.715" y="4.76275" dx="0.6" dy="2" layer="1" roundness="50"/>
+<wire x1="-7" y1="4" x2="-7" y2="-4" width="0.127" layer="21"/>
+<wire x1="7" y1="4" x2="7" y2="-4" width="0.127" layer="21"/>
+<wire x1="-7" y1="4" x2="-6.5" y2="4" width="0.127" layer="21"/>
+<wire x1="-7" y1="-4" x2="-6.5" y2="-4" width="0.127" layer="21"/>
+<wire x1="7" y1="4" x2="6.5" y2="4" width="0.127" layer="21"/>
+<wire x1="7" y1="-4" x2="6.5" y2="-4" width="0.127" layer="21"/>
+<circle x="-6" y="-2.5" radius="0.5" width="0.127" layer="21"/>
+<text x="-5.5" y="-1.5" size="0.8128" layer="21" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="PHOTODIODE">
@@ -255,6 +285,34 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="4" x="7.62" y="-2.54" length="middle" rot="R180"/>
 <pin name="5" x="7.62" y="-5.08" length="middle" rot="R180"/>
 <pin name="6" x="7.62" y="-7.62" length="middle" rot="R180"/>
+</symbol>
+<symbol name="PIC24FVXXKA301">
+<pin name="#MCLR" x="-30.48" y="12.7" visible="pin" length="middle"/>
+<pin name="PGEC2/SCK2/RA0" x="-30.48" y="10.16" visible="pin" length="middle"/>
+<pin name="PGED2/SDO2/RA1" x="-30.48" y="7.62" visible="pin" length="middle"/>
+<pin name="PGED1/AN2/SDI2/RB0" x="-30.48" y="5.08" visible="pin" length="middle"/>
+<pin name="PGEC1/AN3/RB1" x="-30.48" y="2.54" visible="pin" length="middle"/>
+<pin name="AN4/SDA2/RB2" x="-30.48" y="0" visible="pin" length="middle"/>
+<pin name="OSCI/AN13/RA2" x="-30.48" y="-2.54" visible="pin" length="middle"/>
+<pin name="OSCO/AN14/RA3" x="-30.48" y="-5.08" visible="pin" length="middle"/>
+<pin name="PGED3/AN15/RB4" x="-30.48" y="-7.62" visible="pin" length="middle"/>
+<pin name="PGEC3/RA4" x="-30.48" y="-10.16" visible="pin" length="middle"/>
+<pin name="INT0/RB7" x="30.48" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="SCL1/RB8" x="30.48" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="SDA1/RB9" x="30.48" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="VCAP" x="30.48" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="AN12/SCK1/#SS2/INT2/RB12" x="30.48" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="AN11/SDO1/RB13" x="30.48" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="AN10/SDI1/INT1/RB14" x="30.48" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="AN9/SCL2/#SS1/RB15" x="30.48" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="VSS" x="30.48" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="VDD" x="30.48" y="12.7" visible="pin" length="middle" rot="R180"/>
+<wire x1="-25.4" y1="15.24" x2="-25.4" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-25.4" y1="-12.7" x2="25.4" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-12.7" x2="25.4" y2="15.24" width="0.254" layer="94"/>
+<wire x1="25.4" y1="15.24" x2="-25.4" y2="15.24" width="0.254" layer="94"/>
+<text x="-25.4" y="15.24" size="1.6764" layer="94">&gt;NAME</text>
+<text x="-22.86" y="-15.24" size="1.6764" layer="94">PIC24FVxxKA301</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -341,6 +399,41 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
+<deviceset name="PIC24FVXXKA301" prefix="U">
+<description>Microchip PIC24FVxxKA301 microcontroller (2k ram, 12-bit adc, 2-5.5V operating voltage)</description>
+<gates>
+<gate name="G$1" symbol="PIC24FVXXKA301" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC-20">
+<connects>
+<connect gate="G$1" pin="#MCLR" pad="1"/>
+<connect gate="G$1" pin="AN10/SDI1/INT1/RB14" pad="17"/>
+<connect gate="G$1" pin="AN11/SDO1/RB13" pad="16"/>
+<connect gate="G$1" pin="AN12/SCK1/#SS2/INT2/RB12" pad="15"/>
+<connect gate="G$1" pin="AN4/SDA2/RB2" pad="6"/>
+<connect gate="G$1" pin="AN9/SCL2/#SS1/RB15" pad="18"/>
+<connect gate="G$1" pin="INT0/RB7" pad="11"/>
+<connect gate="G$1" pin="OSCI/AN13/RA2" pad="7"/>
+<connect gate="G$1" pin="OSCO/AN14/RA3" pad="8"/>
+<connect gate="G$1" pin="PGEC1/AN3/RB1" pad="5"/>
+<connect gate="G$1" pin="PGEC2/SCK2/RA0" pad="2"/>
+<connect gate="G$1" pin="PGEC3/RA4" pad="10"/>
+<connect gate="G$1" pin="PGED1/AN2/SDI2/RB0" pad="4"/>
+<connect gate="G$1" pin="PGED2/SDO2/RA1" pad="3"/>
+<connect gate="G$1" pin="PGED3/AN15/RB4" pad="9"/>
+<connect gate="G$1" pin="SCL1/RB8" pad="12"/>
+<connect gate="G$1" pin="SDA1/RB9" pad="13"/>
+<connect gate="G$1" pin="VCAP" pad="14"/>
+<connect gate="G$1" pin="VDD" pad="20"/>
+<connect gate="G$1" pin="VSS" pad="19"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -357,6 +450,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U1" library="openct" deviceset="OPAMP-LMP7721" device="" value="LMP7721"/>
 <part name="U2" library="openct" deviceset="OPAMP-MAX4477" device="" value="MAX4477"/>
 <part name="U$1" library="openct" deviceset="1X06" device=""/>
+<part name="U3" library="openct" deviceset="PIC24FVXXKA301" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -368,6 +462,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="U2" gate="A" x="53.34" y="0"/>
 <instance part="U2" gate="B" x="93.98" y="-2.54"/>
 <instance part="U$1" gate="G$1" x="-22.86" y="-38.1"/>
+<instance part="U3" gate="G$1" x="35.56" y="-88.9"/>
 </instances>
 <busses>
 </busses>
