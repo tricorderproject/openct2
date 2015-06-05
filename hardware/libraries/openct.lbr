@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -299,6 +299,27 @@ chip</description>
 <wire x1="1.75" y1="-1" x2="1.5" y2="-1" width="0.127" layer="21"/>
 <circle x="-1.75" y="-1.5" radius="0.25" width="0.127" layer="21"/>
 <text x="-1.5" y="-0.5" size="0.8128" layer="21">&gt;NAME</text>
+</package>
+<package name="BPW34S-4STACK-SIDEMOUNT">
+<wire x1="-0.5" y1="0.5" x2="-0.5" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-0.5" x2="-0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1.5" x2="0.5" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-0.5" x2="-0.5" y2="0.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="0.5" x2="0.5" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-0.5" x2="0.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-0.5" x2="1.5" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-0.5" x2="-1.5" y2="-0.5" width="0.127" layer="21"/>
+<circle x="1.5" y="1" radius="0.25" width="0.127" layer="21"/>
+<wire x1="-3.5" y1="1.75" x2="3.5" y2="1.75" width="0.127" layer="48" style="shortdash"/>
+<text x="-1.75" y="-3" size="1.016" layer="48">&gt;NAME</text>
+<smd name="A" x="-3.5" y="4" dx="1" dy="12" layer="1"/>
+<smd name="C" x="3.5" y="4" dx="1" dy="12" layer="1"/>
+<wire x1="-2.5" y1="11" x2="-2.5" y2="2.75" width="0.127" layer="48" style="shortdash"/>
+<wire x1="-2.5" y1="2.75" x2="2.5" y2="2.75" width="0.127" layer="48" style="shortdash"/>
+<wire x1="2.5" y1="2.75" x2="2.5" y2="11" width="0.127" layer="48" style="shortdash"/>
+<wire x1="2" y1="4.75" x2="-2" y2="4.75" width="0.127" layer="48" style="shortdash"/>
+<wire x1="-2" y1="6.75" x2="2" y2="6.75" width="0.127" layer="48" style="shortdash"/>
+<wire x1="-2" y1="8.75" x2="2" y2="8.75" width="0.127" layer="48" style="shortdash"/>
 </package>
 </packages>
 <symbols>
@@ -738,7 +759,16 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <gate name="G$1" symbol="PHOTODIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="BPW34S-SIDEMOUNT">
+<device name="1-SIDEMOUNT" package="BPW34S-SIDEMOUNT">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="A"/>
+<connect gate="G$1" pin="CATHODE" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="4STACK-SIDEMOUNT" package="BPW34S-4STACK-SIDEMOUNT">
 <connects>
 <connect gate="G$1" pin="ANODE" pad="A"/>
 <connect gate="G$1" pin="CATHODE" pad="C"/>
