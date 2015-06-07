@@ -767,7 +767,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="D1" library="openct" deviceset="PHOTODIODE" device="4STACK-SIDEMOUNT" value="BPW34S"/>
 <part name="U$14" library="openct" deviceset="5V" device=""/>
 <part name="U$15" library="openct" deviceset="5V" device=""/>
-<part name="R16" library="openct" deviceset="RESISTOR" device="0603" value="THERM"/>
+<part name="R16" library="openct" deviceset="RESISTOR" device="0603" value="NCP18XV103"/>
 <part name="GND15" library="openct" deviceset="GND" device=""/>
 <part name="R17" library="openct" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="U$16" library="openct" deviceset="5V" device=""/>
