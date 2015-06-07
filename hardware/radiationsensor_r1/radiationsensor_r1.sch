@@ -704,13 +704,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <parts>
 <part name="U1" library="openct" deviceset="OPAMP-LMP7721" device="" value="LMP7721"/>
 <part name="U2" library="openct" deviceset="OPAMP-MAX4477" device="" value="MAX4477"/>
-<part name="C1" library="openct" deviceset="CAP" device="0603" value="0.01uF"/>
+<part name="C1" library="openct" deviceset="CAP" device="0603" value="0.01uF 50V"/>
 <part name="C2" library="openct" deviceset="CAP" device="0603" value="4.7pF"/>
 <part name="C3" library="openct" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="C4" library="openct" deviceset="CAP" device="0603" value="1uF 50V"/>
 <part name="R1" library="openct" deviceset="RESISTOR" device="0603" value="1M"/>
 <part name="R2" library="openct" deviceset="RESISTOR" device="0603" value="10M"/>
-<part name="R3" library="openct" deviceset="RESISTOR" device="0603" value="10M"/>
+<part name="R3" library="openct" deviceset="RESISTOR" device="0603" value="47M"/>
 <part name="C5" library="openct" deviceset="CAP" device="0603" value="1000pF"/>
 <part name="GND1" library="openct" deviceset="GND" device=""/>
 <part name="GND2" library="openct" deviceset="GND" device=""/>
@@ -719,38 +719,38 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="U$2" library="openct" deviceset="5V" device=""/>
 <part name="U$3" library="openct" deviceset="V/2" device=""/>
 <part name="U$4" library="openct" deviceset="VBIAS" device=""/>
-<part name="C6" library="openct" deviceset="CAP" device="0603" value="0.1uF"/>
+<part name="C6" library="openct" deviceset="CAP" device="0603" value="4.7uF"/>
 <part name="GND5" library="openct" deviceset="GND" device=""/>
 <part name="GND6" library="openct" deviceset="GND" device=""/>
 <part name="U$5" library="openct" deviceset="5V" device=""/>
 <part name="R4" library="openct" deviceset="RESISTOR" device="0603" value="1k"/>
 <part name="U$7" library="openct" deviceset="V/2" device=""/>
-<part name="R5" library="openct" deviceset="RESISTOR" device="0603" value="20k"/>
+<part name="R5" library="openct" deviceset="RESISTOR" device="0603" value="33k"/>
 <part name="C7" library="openct" deviceset="CAP" device="0603" value="100pF"/>
 <part name="C8" library="openct" deviceset="CAP" device="0603" value="0.01uF"/>
 <part name="R6" library="openct" deviceset="RESISTOR" device="0603" value="1k"/>
 <part name="U$8" library="openct" deviceset="V/2" device=""/>
-<part name="R7" library="openct" deviceset="RESISTOR" device="0603" value="20k"/>
+<part name="R7" library="openct" deviceset="RESISTOR" device="0603" value="33k"/>
 <part name="C9" library="openct" deviceset="CAP" device="0603" value="100pF"/>
 <part name="U$9" library="openct" deviceset="5V" device=""/>
 <part name="GND7" library="openct" deviceset="GND" device=""/>
-<part name="R8" library="openct" deviceset="RESISTOR" device="0603" value="100k"/>
-<part name="R9" library="openct" deviceset="RESISTOR" device="0603" value="100k"/>
+<part name="R8" library="openct" deviceset="RESISTOR" device="0603" value="51k"/>
+<part name="R9" library="openct" deviceset="RESISTOR" device="0603" value="51k"/>
 <part name="U$10" library="openct" deviceset="V/2" device=""/>
 <part name="U5" library="openct" deviceset="AD5160" device="" value="50k"/>
 <part name="C10" library="openct" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="GND8" library="openct" deviceset="GND" device=""/>
 <part name="U4" library="openct" deviceset="OPAMP-MAX4477" device="" value="MAX4477"/>
 <part name="C11" library="openct" deviceset="CAP" device="0603" value="0.1uF"/>
-<part name="R10" library="openct" deviceset="RESISTOR" device="0603" value="100k"/>
-<part name="R11" library="openct" deviceset="RESISTOR" device="0603" value="100k"/>
+<part name="R10" library="openct" deviceset="RESISTOR" device="0603" value="51k"/>
+<part name="R11" library="openct" deviceset="RESISTOR" device="0603" value="51k"/>
 <part name="U$12" library="openct" deviceset="5V" device=""/>
 <part name="GND9" library="openct" deviceset="GND" device=""/>
 <part name="GND10" library="openct" deviceset="GND" device=""/>
 <part name="C12" library="openct" deviceset="CAP" device="0603" value="0.1uF"/>
 <part name="GND11" library="openct" deviceset="GND" device=""/>
 <part name="U$13" library="openct" deviceset="5V" device=""/>
-<part name="R12" library="openct" deviceset="RESISTOR" device="0603" value="51.k"/>
+<part name="R12" library="openct" deviceset="RESISTOR" device="0603" value="3.3k"/>
 <part name="R13" library="openct" deviceset="RESISTOR" device="0603" value="1M"/>
 <part name="R14" library="openct" deviceset="RESISTOR" device="0603" value="190k"/>
 <part name="R15" library="openct" deviceset="RESISTOR" device="0603" value="165k"/>
@@ -764,7 +764,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="U$1" library="openct" deviceset="VBIAS" device=""/>
 <part name="C15" library="openct" deviceset="CAP" device="0603" value="0.1uF 50V"/>
 <part name="GND20" library="openct" deviceset="GND" device=""/>
-<part name="D2" library="openct" deviceset="PHOTODIODE" device="4STACK-SIDEMOUNT" value="BPW34S"/>
+<part name="D1" library="openct" deviceset="PHOTODIODE" device="4STACK-SIDEMOUNT" value="BPW34S"/>
 <part name="U$14" library="openct" deviceset="5V" device=""/>
 <part name="U$15" library="openct" deviceset="5V" device=""/>
 <part name="R16" library="openct" deviceset="RESISTOR" device="0603" value="THERM"/>
@@ -785,31 +785,44 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <text x="20.32" y="0" size="1.778" layer="97">PREAMPLIFIER</text>
 <wire x1="38.1" y1="53.34" x2="38.1" y2="-20.32" width="0.1524" layer="97" style="longdash"/>
 <wire x1="147.32" y1="53.34" x2="147.32" y2="-20.32" width="0.1524" layer="97" style="longdash"/>
-<text x="132.08" y="-10.16" size="1.778" layer="97">AMPLIFIER</text>
+<text x="129.54" y="-10.16" size="1.778" layer="97">AMPLIFIER</text>
 <text x="200.66" y="-12.7" size="1.778" layer="97">AC COUPLER</text>
 <wire x1="218.44" y1="53.34" x2="218.44" y2="-20.32" width="0.1524" layer="97" style="longdash"/>
 <text x="259.08" y="-15.24" size="1.778" layer="97">COMPARATOR</text>
-<wire x1="-35.56" y1="-30.48" x2="-35.56" y2="-81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-35.56" y1="-81.28" x2="12.7" y2="-81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="12.7" y1="-81.28" x2="12.7" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-35.56" y1="-30.48" x2="-35.56" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-35.56" y1="-86.36" x2="12.7" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="12.7" y1="-86.36" x2="12.7" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="12.7" y1="-30.48" x2="-35.56" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="185.42" y1="-30.48" x2="185.42" y2="-81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="185.42" y1="-81.28" x2="271.78" y2="-81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="271.78" y1="-81.28" x2="271.78" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="271.78" y1="-30.48" x2="185.42" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="185.42" y1="-96.52" x2="185.42" y2="-152.4" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="185.42" y1="-152.4" x2="271.78" y2="-152.4" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="271.78" y1="-152.4" x2="271.78" y2="-96.52" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="271.78" y1="-96.52" x2="185.42" y2="-96.52" width="0.1524" layer="97" style="shortdash"/>
-<text x="243.84" y="-76.2" size="1.778" layer="97">VOLTAGE REFERENCE</text>
-<text x="243.84" y="-78.74" size="1.778" layer="97">(V/2)</text>
-<text x="243.84" y="-147.32" size="1.778" layer="97">VOLTAGE REFERENCE</text>
-<text x="233.68" y="-149.86" size="1.778" layer="97">(COMPARATOR, ADJUSTABLE)</text>
-<text x="-10.16" y="-78.74" size="1.778" layer="97">USER INTERFACE</text>
-<wire x1="45.72" y1="-157.48" x2="45.72" y2="-190.5" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="45.72" y1="-190.5" x2="134.62" y2="-190.5" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="134.62" y1="-190.5" x2="134.62" y2="-157.48" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="134.62" y1="-157.48" x2="45.72" y2="-157.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="233.68" y1="-30.48" x2="233.68" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="233.68" y1="-86.36" x2="271.78" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="-86.36" x2="271.78" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="-30.48" x2="233.68" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="142.24" y1="-30.48" x2="142.24" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="142.24" y1="-86.36" x2="228.6" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="228.6" y1="-86.36" x2="228.6" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="228.6" y1="-30.48" x2="142.24" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<text x="241.3" y="-81.28" size="1.778" layer="97">VOLTAGE REFERENCE</text>
+<text x="241.3" y="-83.82" size="1.778" layer="97">(V/2)</text>
+<text x="198.12" y="-81.28" size="1.778" layer="97">VOLTAGE REFERENCE</text>
+<text x="190.5" y="-83.82" size="1.778" layer="97">(COMPARATOR, ADJUSTABLE)</text>
+<text x="-10.16" y="-83.82" size="1.778" layer="97">USER INTERFACE</text>
+<wire x1="81.28" y1="-30.48" x2="81.28" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="81.28" y1="-86.36" x2="137.16" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="137.16" y1="-86.36" x2="137.16" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="137.16" y1="-30.48" x2="81.28" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<text x="259.08" y="-17.78" size="1.778" layer="97">(~15mv HYSTERESIS)</text>
+<text x="129.54" y="-12.7" size="1.778" layer="97">(~1100X GAIN)</text>
+<text x="116.84" y="-83.82" size="1.778" layer="97">DECOUPLING</text>
+<wire x1="17.78" y1="-30.48" x2="17.78" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="17.78" y1="-86.36" x2="76.2" y2="-86.36" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="-86.36" x2="76.2" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="76.2" y1="-30.48" x2="17.78" y2="-30.48" width="0.1524" layer="97" style="shortdash"/>
+<text x="43.18" y="-83.82" size="1.778" layer="97">TEMPERATURE SENSOR</text>
+<text x="271.78" y="-96.52" size="1.778" layer="97" rot="R180">PETER JANSEN, JUNE 2015</text>
+<text x="271.78" y="-93.98" size="1.778" layer="97" rot="R180">RADIATION SENSOR (REVISION 1)</text>
+<text x="271.78" y="-99.06" size="1.778" layer="97" rot="R180">BASED ON MAXIM APPLICATION NOTE 2236</text>
+<text x="-58.42" y="2.54" size="1.778" layer="97">(STACK OF 4</text>
+<text x="-58.42" y="0" size="1.778" layer="97">PHOTODIODES)</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="2.54" y="10.16"/>
@@ -843,14 +856,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="U$8" gate="G$1" x="109.22" y="-2.54" rot="R180"/>
 <instance part="R7" gate="G$1" x="132.08" y="20.32"/>
 <instance part="C9" gate="G$1" x="134.62" y="27.94" rot="R90"/>
-<instance part="U$9" gate="G$1" x="223.52" y="-40.64"/>
-<instance part="GND7" gate="1" x="223.52" y="-68.58"/>
-<instance part="R8" gate="G$1" x="223.52" y="-45.72" rot="R90"/>
-<instance part="R9" gate="G$1" x="223.52" y="-60.96" rot="R90"/>
-<instance part="U$10" gate="G$1" x="233.68" y="-50.8"/>
-<instance part="U5" gate="G$1" x="220.98" y="-124.46"/>
-<instance part="C10" gate="G$1" x="233.68" y="-58.42"/>
-<instance part="GND8" gate="1" x="233.68" y="-63.5"/>
+<instance part="U$9" gate="G$1" x="246.38" y="-40.64"/>
+<instance part="GND7" gate="1" x="246.38" y="-68.58"/>
+<instance part="R8" gate="G$1" x="246.38" y="-45.72" rot="R90"/>
+<instance part="R9" gate="G$1" x="246.38" y="-60.96" rot="R90"/>
+<instance part="U$10" gate="G$1" x="256.54" y="-50.8"/>
+<instance part="U5" gate="G$1" x="177.8" y="-58.42"/>
+<instance part="C10" gate="G$1" x="256.54" y="-58.42"/>
+<instance part="GND8" gate="1" x="256.54" y="-63.5"/>
 <instance part="U4" gate="A" x="193.04" y="7.62"/>
 <instance part="U4" gate="B" x="248.92" y="10.16"/>
 <instance part="C11" gate="G$1" x="157.48" y="5.08" rot="R90"/>
@@ -864,32 +877,32 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="U$13" gate="G$1" x="193.04" y="20.32"/>
 <instance part="R12" gate="G$1" x="228.6" y="7.62"/>
 <instance part="R13" gate="G$1" x="248.92" y="0"/>
-<instance part="R14" gate="G$1" x="241.3" y="-132.08" rot="R90"/>
-<instance part="R15" gate="G$1" x="241.3" y="-111.76" rot="R90"/>
-<instance part="U$11" gate="G$1" x="241.3" y="-106.68"/>
-<instance part="GND12" gate="1" x="241.3" y="-139.7"/>
-<instance part="GND13" gate="1" x="205.74" y="-137.16"/>
-<instance part="C13" gate="G$1" x="248.92" y="-132.08"/>
-<instance part="GND14" gate="1" x="248.92" y="-137.16"/>
-<instance part="C14" gate="G$1" x="121.92" y="-175.26"/>
-<instance part="GND19" gate="1" x="121.92" y="-180.34"/>
-<instance part="U$1" gate="G$1" x="58.42" y="-170.18"/>
-<instance part="C15" gate="G$1" x="58.42" y="-175.26"/>
-<instance part="GND20" gate="1" x="58.42" y="-180.34"/>
-<instance part="D2" gate="G$1" x="-27.94" y="5.08" rot="R180"/>
-<instance part="U$14" gate="G$1" x="205.74" y="-114.3"/>
-<instance part="U$15" gate="G$1" x="121.92" y="-170.18"/>
-<instance part="R16" gate="G$1" x="86.36" y="-132.08" rot="R90"/>
-<instance part="GND15" gate="1" x="86.36" y="-139.7"/>
-<instance part="R17" gate="G$1" x="86.36" y="-116.84" rot="R90"/>
-<instance part="U$16" gate="G$1" x="86.36" y="-111.76"/>
+<instance part="R14" gate="G$1" x="198.12" y="-66.04" rot="R90"/>
+<instance part="R15" gate="G$1" x="198.12" y="-45.72" rot="R90"/>
+<instance part="U$11" gate="G$1" x="198.12" y="-40.64"/>
+<instance part="GND12" gate="1" x="198.12" y="-73.66"/>
+<instance part="GND13" gate="1" x="162.56" y="-71.12"/>
+<instance part="C13" gate="G$1" x="205.74" y="-66.04"/>
+<instance part="GND14" gate="1" x="205.74" y="-71.12"/>
+<instance part="C14" gate="G$1" x="119.38" y="-58.42"/>
+<instance part="GND19" gate="1" x="119.38" y="-63.5"/>
+<instance part="U$1" gate="G$1" x="91.44" y="-53.34"/>
+<instance part="C15" gate="G$1" x="91.44" y="-58.42"/>
+<instance part="GND20" gate="1" x="91.44" y="-63.5"/>
+<instance part="D1" gate="G$1" x="-27.94" y="5.08" rot="R180"/>
+<instance part="U$14" gate="G$1" x="162.56" y="-48.26"/>
+<instance part="U$15" gate="G$1" x="119.38" y="-53.34"/>
+<instance part="R16" gate="G$1" x="43.18" y="-60.96" rot="R90"/>
+<instance part="GND15" gate="1" x="43.18" y="-68.58"/>
+<instance part="R17" gate="G$1" x="43.18" y="-45.72" rot="R90"/>
+<instance part="U$16" gate="G$1" x="43.18" y="-40.64"/>
 <instance part="CN1" gate="G$1" x="-25.4" y="-53.34"/>
 <instance part="GND17" gate="1" x="7.62" y="-71.12"/>
 <instance part="U$22" gate="G$1" x="0" y="-68.58" rot="R180"/>
 <instance part="U$23" gate="G$1" x="-7.62" y="-68.58" rot="R180"/>
-<instance part="C16" gate="G$1" x="111.76" y="-175.26"/>
-<instance part="U$6" gate="G$1" x="111.76" y="-170.18"/>
-<instance part="GND16" gate="1" x="111.76" y="-180.34"/>
+<instance part="C16" gate="G$1" x="109.22" y="-58.42"/>
+<instance part="U$6" gate="G$1" x="109.22" y="-53.34"/>
+<instance part="GND16" gate="1" x="109.22" y="-63.5"/>
 </instances>
 <busses>
 </busses>
@@ -919,7 +932,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <wire x1="-27.94" y1="10.16" x2="-27.94" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-27.94" y="12.7"/>
 <wire x1="-27.94" y1="12.7" x2="-27.94" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="CATHODE"/>
+<pinref part="D1" gate="G$1" pin="CATHODE"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -953,7 +966,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="GND" class="0">
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="D2" gate="G$1" pin="ANODE"/>
+<pinref part="D1" gate="G$1" pin="ANODE"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
@@ -1001,8 +1014,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="GND"/>
-<wire x1="208.28" y1="-129.54" x2="205.74" y2="-129.54" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="-129.54" x2="205.74" y2="-134.62" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-63.5" x2="162.56" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-63.5" x2="162.56" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -1074,8 +1087,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="VDD"/>
-<wire x1="208.28" y1="-119.38" x2="205.74" y2="-119.38" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="-119.38" x2="205.74" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-53.34" x2="162.56" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-53.34" x2="162.56" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="U$14" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -1128,14 +1141,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="223.52" y1="-50.8" x2="223.52" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="-53.34" x2="223.52" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="-53.34" x2="233.68" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="-53.34" x2="233.68" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="-50.8" x2="246.38" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="-53.34" x2="246.38" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="-53.34" x2="256.54" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="-53.34" x2="256.54" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="U$10" gate="G$1" pin="V/2"/>
-<junction x="223.52" y="-53.34"/>
+<junction x="246.38" y="-53.34"/>
 <pinref part="C10" gate="G$1" pin="1"/>
-<junction x="233.68" y="-53.34"/>
+<junction x="256.54" y="-53.34"/>
 </segment>
 </net>
 <net name="VBIAS" class="0">
@@ -1304,31 +1317,31 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="W"/>
-<wire x1="233.68" y1="-124.46" x2="241.3" y2="-124.46" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="-124.46" x2="241.3" y2="-127" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="-58.42" x2="198.12" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="-58.42" x2="198.12" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="-124.46" x2="248.92" y2="-124.46" width="0.1524" layer="91"/>
-<junction x="241.3" y="-124.46"/>
-<label x="256.54" y="-124.46" size="1.778" layer="95"/>
+<wire x1="198.12" y1="-58.42" x2="205.74" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="198.12" y="-58.42"/>
+<label x="213.36" y="-58.42" size="1.778" layer="95"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="-124.46" x2="261.62" y2="-124.46" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="-127" x2="248.92" y2="-124.46" width="0.1524" layer="91"/>
-<junction x="248.92" y="-124.46"/>
+<wire x1="205.74" y1="-58.42" x2="218.44" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="-60.96" x2="205.74" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="205.74" y="-58.42"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="A"/>
-<wire x1="233.68" y1="-119.38" x2="241.3" y2="-119.38" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="-119.38" x2="241.3" y2="-116.84" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="-53.34" x2="198.12" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="-53.34" x2="198.12" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="SDI"/>
-<wire x1="208.28" y1="-121.92" x2="195.58" y2="-121.92" width="0.1524" layer="91"/>
-<label x="195.58" y="-121.92" size="1.778" layer="95"/>
+<wire x1="165.1" y1="-55.88" x2="152.4" y2="-55.88" width="0.1524" layer="91"/>
+<label x="152.4" y="-55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="4"/>
@@ -1339,8 +1352,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="SCLK" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="CLK"/>
-<wire x1="208.28" y1="-124.46" x2="195.58" y2="-124.46" width="0.1524" layer="91"/>
-<label x="195.58" y="-124.46" size="1.778" layer="95"/>
+<wire x1="165.1" y1="-58.42" x2="152.4" y2="-58.42" width="0.1524" layer="91"/>
+<label x="152.4" y="-58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="3"/>
@@ -1351,8 +1364,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <net name="CS" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="CS#"/>
-<wire x1="208.28" y1="-127" x2="195.58" y2="-127" width="0.1524" layer="91"/>
-<label x="195.58" y="-127" size="1.778" layer="95"/>
+<wire x1="165.1" y1="-60.96" x2="152.4" y2="-60.96" width="0.1524" layer="91"/>
+<label x="152.4" y="-60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="2"/>
@@ -1364,11 +1377,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="-127" x2="86.36" y2="-124.46" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="-124.46" x2="86.36" y2="-121.92" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="-124.46" x2="104.14" y2="-124.46" width="0.1524" layer="91"/>
-<junction x="86.36" y="-124.46"/>
-<label x="93.98" y="-124.46" size="1.778" layer="95"/>
+<wire x1="43.18" y1="-55.88" x2="43.18" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-53.34" x2="43.18" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-53.34" x2="60.96" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="43.18" y="-53.34"/>
+<label x="50.8" y="-53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="CN1" gate="G$1" pin="1"/>
