@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.25" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -53,6 +53,7 @@
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="no"/>
@@ -87,8 +88,12 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
+<layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
+<layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="no" active="yes"/>
@@ -127,7 +132,6 @@
 <wire x1="160" y1="0" x2="160" y2="100" width="0" layer="20"/>
 <wire x1="160" y1="100" x2="0" y2="100" width="0" layer="20"/>
 <wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
-<wire x1="190.5" y1="0" x2="254" y2="0" width="0.4064" layer="21" curve="-180"/>
 <wire x1="63.5" y1="19.05" x2="63.5" y2="31.75" width="0.4064" layer="21"/>
 <wire x1="63.5" y1="31.75" x2="63.5" y2="114.3" width="0.4064" layer="21"/>
 <wire x1="63.5" y1="31.75" x2="12.7" y2="82.55" width="0.4064" layer="21"/>
@@ -143,6 +147,10 @@
 <wire x1="60.325" y1="60.325" x2="66.675" y2="60.325" width="0.01" layer="21"/>
 <wire x1="3.175" y1="0" x2="123.825" y2="0" width="0.254" layer="21" curve="-180"/>
 <wire x1="34.925" y1="31.75" x2="92.075" y2="31.75" width="0.254" layer="21" curve="-180"/>
+<wire x1="113" y1="59" x2="122" y2="68" width="0.3048" layer="21"/>
+<wire x1="88.9" y1="31.75" x2="114.3" y2="31.75" width="0.3048" layer="21"/>
+<wire x1="114.3" y1="31.75" x2="114.3" y2="44.45" width="0.3048" layer="21"/>
+<circle x="114.3" y="44.45" radius="6.35" width="0.01" layer="20"/>
 </plain>
 <libraries>
 <library name="openct">
@@ -194,59 +202,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-15" y1="-2.5" x2="15" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="14" y1="2.5" x2="14" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="14" y1="-1.5" x2="15" y2="-1.5" width="0.127" layer="21"/>
-</package>
-</packages>
-</library>
-<library name="SparkFun-Boards">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-In this library you'll find boards and modules: Arduino footprints, breadboards, non-RF modules, etc.&lt;br&gt;&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="ARDUINO_PRO_MINI">
-<wire x1="-8.89" y1="16.51" x2="-8.89" y2="-16.51" width="0.127" layer="51"/>
-<wire x1="-8.89" y1="-16.51" x2="8.89" y2="-16.51" width="0.127" layer="51"/>
-<wire x1="8.89" y1="-16.51" x2="8.89" y2="16.51" width="0.127" layer="51"/>
-<wire x1="8.89" y1="16.51" x2="-8.89" y2="16.51" width="0.127" layer="51"/>
-<pad name="1" x="-7.62" y="12.7" drill="1.016" diameter="1.8796"/>
-<pad name="2" x="-7.62" y="10.16" drill="1.016" diameter="1.8796"/>
-<pad name="3" x="-7.62" y="7.62" drill="1.016" diameter="1.8796"/>
-<pad name="4" x="-7.62" y="5.08" drill="1.016" diameter="1.8796"/>
-<pad name="5" x="-7.62" y="2.54" drill="1.016" diameter="1.8796"/>
-<pad name="6" x="-7.62" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="7" x="-7.62" y="-2.54" drill="1.016" diameter="1.8796"/>
-<pad name="8" x="-7.62" y="-5.08" drill="1.016" diameter="1.8796"/>
-<pad name="9" x="-7.62" y="-7.62" drill="1.016" diameter="1.8796"/>
-<pad name="10" x="-7.62" y="-10.16" drill="1.016" diameter="1.8796"/>
-<pad name="11" x="-7.62" y="-12.7" drill="1.016" diameter="1.8796"/>
-<pad name="12" x="-7.62" y="-15.24" drill="1.016" diameter="1.8796"/>
-<pad name="13" x="7.62" y="-15.24" drill="1.016" diameter="1.8796"/>
-<pad name="14" x="7.62" y="-12.7" drill="1.016" diameter="1.8796"/>
-<pad name="15" x="7.62" y="-10.16" drill="1.016" diameter="1.8796"/>
-<pad name="16" x="7.62" y="-7.62" drill="1.016" diameter="1.8796"/>
-<pad name="17" x="7.62" y="-5.08" drill="1.016" diameter="1.8796"/>
-<pad name="18" x="7.62" y="-2.54" drill="1.016" diameter="1.8796"/>
-<pad name="19" x="7.62" y="0" drill="1.016" diameter="1.8796"/>
-<pad name="20" x="7.62" y="2.54" drill="1.016" diameter="1.8796"/>
-<pad name="21" x="7.62" y="5.08" drill="1.016" diameter="1.8796"/>
-<pad name="22" x="7.62" y="7.62" drill="1.016" diameter="1.8796"/>
-<pad name="23" x="7.62" y="10.16" drill="1.016" diameter="1.8796"/>
-<pad name="24" x="7.62" y="12.7" drill="1.016" diameter="1.8796"/>
-<text x="-3.81" y="-13.97" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.81" y="-15.875" size="1.27" layer="27">&gt;VALUE</text>
-<pad name="A6" x="4.7625" y="-9.04875" drill="1.016" diameter="1.8796"/>
-<pad name="A7" x="4.7625" y="-6.50875" drill="1.016" diameter="1.8796"/>
-<pad name="A5" x="4.7625" y="3.96875" drill="1.016" diameter="1.8796"/>
-<pad name="A4" x="4.7625" y="1.42875" drill="1.016" diameter="1.8796"/>
-<pad name="BLK" x="-6.35" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="GND" x="-3.81" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="VCC" x="-1.27" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="RXI" x="1.27" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="TXO" x="3.81" y="15.24" drill="1.016" diameter="1.8796"/>
-<pad name="GRN" x="6.35" y="15.24" drill="1.016" diameter="1.8796"/>
 </package>
 </packages>
 </library>
@@ -617,9 +572,8 @@ design rules under a new name.</description>
 <element name="CN13" library="openct" package="RADIATION-SENSOR-REV1" value="RADIATION-SENSOR-REV1" x="97.865434375" y="67.22175" rot="R242.5"/>
 <element name="CN14" library="openct" package="RADIATION-SENSOR-REV1" value="RADIATION-SENSOR-REV1" x="103.498215625" y="63.886175" rot="R237.5"/>
 <element name="CN15" library="openct" package="RADIATION-SENSOR-REV1" value="RADIATION-SENSOR-REV1" x="108.798865625" y="60.14395625" rot="R232.5"/>
-<element name="U$17" library="SparkFun-Boards" package="ARDUINO_PRO_MINI" value="ARDUINO_PRO_MINI" x="-41" y="16.5"/>
-<element name="JP1" library="SparkFun-Connectors" package="2X13" value="M13X22X13" x="148.10058125" y="57.67956875" rot="R200"/>
-<element name="JP2" library="SparkFun-Connectors" package="2X13" value="M13X22X13" x="99.25" y="25.75"/>
+<element name="JP1" library="SparkFun-Connectors" package="2X13" value="M13X22X13" x="152.10058125" y="95.67956875" rot="R200"/>
+<element name="JP2" library="SparkFun-Connectors" package="2X13" value="M13X22X13" x="127.25" y="77.75"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -744,7 +698,7 @@ design rules under a new name.</description>
 <wire x1="104.5972" y1="80.2132" x2="111.3028" y2="76.2508" width="0.1778" layer="16"/>
 <wire x1="111.3028" y1="76.2508" x2="117.6528" y2="71.6788" width="0.1778" layer="16"/>
 <wire x1="117.6528" y1="71.6788" x2="120.9548" y2="69.088" width="0.1778" layer="16"/>
-<wire x1="120.9548" y1="69.088" x2="99.25" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="120.9548" y1="69.088" x2="127.25" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SCLK">
 <contactref element="CN0" pad="3"/>
@@ -835,7 +789,7 @@ design rules under a new name.</description>
 <wire x1="91.0844" y1="54.0004" x2="95.7072" y2="51.2572" width="0.1778" layer="1"/>
 <wire x1="95.7072" y1="51.2572" x2="99.822" y2="48.4124" width="0.1778" layer="1"/>
 <wire x1="99.822" y1="48.4124" x2="103.5812" y2="45.3644" width="0.1778" layer="1"/>
-<wire x1="103.5812" y1="45.3644" x2="119.45875" y2="47.25479375" width="0" layer="19" extent="1-16"/>
+<wire x1="103.5812" y1="45.3644" x2="123.45875" y2="85.25479375" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS8">
 <contactref element="CN8" pad="2"/>
@@ -850,7 +804,7 @@ design rules under a new name.</description>
 <wire x1="92.0496" y1="56.2864" x2="96.774" y2="53.4924" width="0.1778" layer="16"/>
 <wire x1="96.774" y1="53.4924" x2="101.1936" y2="50.4444" width="0.1778" layer="16"/>
 <wire x1="101.1936" y1="50.4444" x2="105.2068" y2="47.0916" width="0.1778" layer="16"/>
-<wire x1="105.2068" y1="47.0916" x2="109.41" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="105.2068" y1="47.0916" x2="137.41" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP8">
 <contactref element="CN8" pad="6"/>
@@ -865,7 +819,7 @@ design rules under a new name.</description>
 <wire x1="92.3544" y1="57.0484" x2="97.1804" y2="54.2544" width="0.1778" layer="1"/>
 <wire x1="97.1804" y1="54.2544" x2="101.6508" y2="51.1048" width="0.1778" layer="1"/>
 <wire x1="101.6508" y1="51.1048" x2="105.5624" y2="47.8536" width="0.1778" layer="1"/>
-<wire x1="105.5624" y1="47.8536" x2="129.006025" y2="50.72971875" width="0" layer="19" extent="1-16"/>
+<wire x1="105.5624" y1="47.8536" x2="133.006025" y2="88.72971875" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS1">
 <contactref element="CN1" pad="2"/>
@@ -892,7 +846,7 @@ design rules under a new name.</description>
 <wire x1="104.3432" y1="79.8576" x2="111.0488" y2="75.8952" width="0.1778" layer="16"/>
 <wire x1="111.0488" y1="75.8952" x2="117.2972" y2="71.4248" width="0.1778" layer="16"/>
 <wire x1="117.2972" y1="71.4248" x2="120.7008" y2="68.7832" width="0.1778" layer="16"/>
-<wire x1="120.7008" y1="68.7832" x2="99.25" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="120.7008" y1="68.7832" x2="127.25" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP1">
 <contactref element="CN1" pad="6"/>
@@ -915,7 +869,7 @@ design rules under a new name.</description>
 <wire x1="91.2368" y1="54.356" x2="95.8088" y2="51.7144" width="0.1778" layer="1"/>
 <wire x1="95.8088" y1="51.7144" x2="100.076" y2="48.768" width="0.1778" layer="1"/>
 <wire x1="100.076" y1="48.768" x2="103.8352" y2="45.72" width="0.1778" layer="1"/>
-<wire x1="103.8352" y1="45.72" x2="120.32748125" y2="44.867975" width="0" layer="19" extent="1-16"/>
+<wire x1="103.8352" y1="45.72" x2="124.32748125" y2="82.867975" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS9">
 <contactref element="CN9" pad="2"/>
@@ -929,7 +883,7 @@ design rules under a new name.</description>
 <wire x1="92.202" y1="56.642" x2="96.9772" y2="53.848" width="0.1778" layer="16"/>
 <wire x1="96.9772" y1="53.848" x2="101.3968" y2="50.8" width="0.1778" layer="16"/>
 <wire x1="101.3968" y1="50.8" x2="105.4608" y2="47.3964" width="0.1778" layer="16"/>
-<wire x1="105.4608" y1="47.3964" x2="109.41" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="105.4608" y1="47.3964" x2="137.41" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP9">
 <contactref element="CN9" pad="6"/>
@@ -943,7 +897,7 @@ design rules under a new name.</description>
 <wire x1="92.5576" y1="57.404" x2="97.4344" y2="54.5592" width="0.1778" layer="1"/>
 <wire x1="97.4344" y1="54.5592" x2="101.9048" y2="51.4096" width="0.1778" layer="1"/>
 <wire x1="101.9048" y1="51.4096" x2="105.8164" y2="48.1584" width="0.1778" layer="1"/>
-<wire x1="105.8164" y1="48.1584" x2="129.87475625" y2="48.3429" width="0" layer="19" extent="1-16"/>
+<wire x1="105.8164" y1="48.1584" x2="133.87475625" y2="86.3429" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS2">
 <contactref element="CN2" pad="2"/>
@@ -964,7 +918,7 @@ design rules under a new name.</description>
 <wire x1="91.0844" y1="54.0004" x2="95.7072" y2="51.2572" width="0.1778" layer="16"/>
 <wire x1="95.7072" y1="51.2572" x2="99.822" y2="48.4124" width="0.1778" layer="16"/>
 <wire x1="99.822" y1="48.4124" x2="103.7336" y2="45.2628" width="0.1778" layer="16"/>
-<wire x1="103.7336" y1="45.2628" x2="101.79" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="103.7336" y1="45.2628" x2="129.79" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP2">
 <contactref element="CN2" pad="6"/>
@@ -985,7 +939,7 @@ design rules under a new name.</description>
 <wire x1="91.3892" y1="54.7624" x2="96.0628" y2="52.07" width="0.1778" layer="1"/>
 <wire x1="96.0628" y1="52.07" x2="100.33" y2="49.0728" width="0.1778" layer="1"/>
 <wire x1="100.33" y1="49.0728" x2="104.0384" y2="46.0248" width="0.1778" layer="1"/>
-<wire x1="104.0384" y1="46.0248" x2="121.84556875" y2="48.123525" width="0" layer="19" extent="1-16"/>
+<wire x1="104.0384" y1="46.0248" x2="125.84556875" y2="86.123525" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS10">
 <contactref element="CN10" pad="2"/>
@@ -998,7 +952,7 @@ design rules under a new name.</description>
 <wire x1="92.3544" y1="57.0484" x2="97.1804" y2="54.2544" width="0.1778" layer="16"/>
 <wire x1="97.1804" y1="54.2544" x2="101.6508" y2="51.1048" width="0.1778" layer="16"/>
 <wire x1="101.6508" y1="51.1048" x2="105.7148" y2="47.7012" width="0.1778" layer="16"/>
-<wire x1="105.7148" y1="47.7012" x2="111.95" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="105.7148" y1="47.7012" x2="139.95" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP10">
 <contactref element="CN10" pad="6"/>
@@ -1011,7 +965,7 @@ design rules under a new name.</description>
 <wire x1="92.8116" y1="57.7596" x2="97.6376" y2="54.9148" width="0.1778" layer="1"/>
 <wire x1="97.6376" y1="54.9148" x2="102.1588" y2="51.7144" width="0.1778" layer="1"/>
 <wire x1="102.1588" y1="51.7144" x2="106.0704" y2="48.4632" width="0.1778" layer="1"/>
-<wire x1="106.0704" y1="48.4632" x2="131.39284375" y2="51.59845" width="0" layer="19" extent="1-16"/>
+<wire x1="106.0704" y1="48.4632" x2="135.39284375" y2="89.59845" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS3">
 <contactref element="CN3" pad="2"/>
@@ -1031,7 +985,7 @@ design rules under a new name.</description>
 <wire x1="91.2368" y1="54.356" x2="95.8088" y2="51.7144" width="0.1778" layer="16"/>
 <wire x1="95.8088" y1="51.7144" x2="100.076" y2="48.768" width="0.1778" layer="16"/>
 <wire x1="100.076" y1="48.768" x2="103.9876" y2="45.5676" width="0.1778" layer="16"/>
-<wire x1="103.9876" y1="45.5676" x2="101.79" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="103.9876" y1="45.5676" x2="129.79" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP3">
 <contactref element="CN3" pad="6"/>
@@ -1051,7 +1005,7 @@ design rules under a new name.</description>
 <wire x1="91.5924" y1="55.118" x2="96.2152" y2="52.4256" width="0.1778" layer="1"/>
 <wire x1="96.2152" y1="52.4256" x2="100.5332" y2="49.4284" width="0.1778" layer="1"/>
 <wire x1="100.5332" y1="49.4284" x2="104.2924" y2="46.3296" width="0.1778" layer="1"/>
-<wire x1="104.2924" y1="46.3296" x2="122.7143" y2="45.73670625" width="0" layer="19" extent="1-16"/>
+<wire x1="104.2924" y1="46.3296" x2="126.7143" y2="83.73670625" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS11">
 <contactref element="CN11" pad="2"/>
@@ -1063,7 +1017,7 @@ design rules under a new name.</description>
 <wire x1="92.5576" y1="57.404" x2="97.4344" y2="54.5592" width="0.1778" layer="16"/>
 <wire x1="97.4344" y1="54.5592" x2="101.9048" y2="51.4096" width="0.1778" layer="16"/>
 <wire x1="101.9048" y1="51.4096" x2="105.9688" y2="48.006" width="0.1778" layer="16"/>
-<wire x1="105.9688" y1="48.006" x2="111.95" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="105.9688" y1="48.006" x2="139.95" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP11">
 <contactref element="CN11" pad="6"/>
@@ -1075,7 +1029,7 @@ design rules under a new name.</description>
 <wire x1="92.1512" y1="61.4172" x2="97.536" y2="58.42" width="0.1778" layer="1"/>
 <wire x1="97.536" y1="58.42" x2="102.4128" y2="55.1688" width="0.1778" layer="1"/>
 <wire x1="102.4128" y1="55.1688" x2="107.6452" y2="51.054" width="0.1778" layer="1"/>
-<wire x1="107.6452" y1="51.054" x2="132.261575" y2="49.21163125" width="0" layer="19" extent="1-16"/>
+<wire x1="107.6452" y1="51.054" x2="136.261575" y2="87.21163125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS4">
 <contactref element="CN4" pad="2"/>
@@ -1094,7 +1048,7 @@ design rules under a new name.</description>
 <wire x1="91.3892" y1="54.7624" x2="96.0628" y2="52.07" width="0.1778" layer="16"/>
 <wire x1="96.0628" y1="52.07" x2="100.33" y2="49.0728" width="0.1778" layer="16"/>
 <wire x1="100.33" y1="49.0728" x2="104.1908" y2="45.8724" width="0.1778" layer="16"/>
-<wire x1="104.1908" y1="45.8724" x2="104.33" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="104.1908" y1="45.8724" x2="132.33" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP4">
 <contactref element="CN4" pad="6"/>
@@ -1113,7 +1067,7 @@ design rules under a new name.</description>
 <wire x1="91.7448" y1="55.5244" x2="96.3676" y2="52.7812" width="0.1778" layer="1"/>
 <wire x1="96.3676" y1="52.7812" x2="100.7872" y2="49.7332" width="0.1778" layer="1"/>
 <wire x1="100.7872" y1="49.7332" x2="104.5464" y2="46.6344" width="0.1778" layer="1"/>
-<wire x1="104.5464" y1="46.6344" x2="124.2323875" y2="48.99225625" width="0" layer="19" extent="1-16"/>
+<wire x1="104.5464" y1="46.6344" x2="128.2323875" y2="86.99225625" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS12">
 <contactref element="CN12" pad="2"/>
@@ -1125,7 +1079,7 @@ design rules under a new name.</description>
 <wire x1="92.8116" y1="57.7596" x2="97.6376" y2="54.9148" width="0.1778" layer="16"/>
 <wire x1="97.6376" y1="54.9148" x2="102.1588" y2="51.7144" width="0.1778" layer="16"/>
 <wire x1="102.1588" y1="51.7144" x2="106.2228" y2="48.3108" width="0.1778" layer="16"/>
-<wire x1="106.2228" y1="48.3108" x2="114.49" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="106.2228" y1="48.3108" x2="142.49" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP12">
 <contactref element="CN12" pad="6"/>
@@ -1136,7 +1090,7 @@ design rules under a new name.</description>
 <wire x1="94.5896" y1="62.8904" x2="98.806" y2="60.706" width="0.1778" layer="1"/>
 <wire x1="98.806" y1="60.706" x2="103.8352" y2="57.2008" width="0.1778" layer="1"/>
 <wire x1="103.8352" y1="57.2008" x2="109.0168" y2="53.2384" width="0.1778" layer="1"/>
-<wire x1="109.0168" y1="53.2384" x2="133.779665625" y2="52.46718125" width="0" layer="19" extent="1-16"/>
+<wire x1="109.0168" y1="53.2384" x2="137.779665625" y2="90.46718125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS5">
 <contactref element="CN5" pad="2"/>
@@ -1154,7 +1108,7 @@ design rules under a new name.</description>
 <wire x1="91.5924" y1="55.118" x2="96.2152" y2="52.4256" width="0.1778" layer="16"/>
 <wire x1="96.2152" y1="52.4256" x2="100.5332" y2="49.4284" width="0.1778" layer="16"/>
 <wire x1="100.5332" y1="49.4284" x2="104.4448" y2="46.1772" width="0.1778" layer="16"/>
-<wire x1="104.4448" y1="46.1772" x2="104.33" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="104.4448" y1="46.1772" x2="132.33" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP5">
 <contactref element="CN5" pad="6"/>
@@ -1172,7 +1126,7 @@ design rules under a new name.</description>
 <wire x1="91.8972" y1="55.88" x2="96.5708" y2="53.1368" width="0.1778" layer="1"/>
 <wire x1="96.5708" y1="53.1368" x2="100.9904" y2="50.0888" width="0.1778" layer="1"/>
 <wire x1="100.9904" y1="50.0888" x2="104.8004" y2="46.9392" width="0.1778" layer="1"/>
-<wire x1="104.8004" y1="46.9392" x2="125.10111875" y2="46.6054375" width="0" layer="19" extent="1-16"/>
+<wire x1="104.8004" y1="46.9392" x2="129.10111875" y2="84.6054375" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS13">
 <contactref element="CN13" pad="2"/>
@@ -1180,7 +1134,7 @@ design rules under a new name.</description>
 <wire x1="96.030071875" y1="60.713909375" x2="97.536" y2="58.42" width="0.1778" layer="16"/>
 <wire x1="97.536" y1="58.42" x2="102.4128" y2="55.1688" width="0.1778" layer="16"/>
 <wire x1="102.4128" y1="55.1688" x2="107.8484" y2="50.8508" width="0.1778" layer="16"/>
-<wire x1="107.8484" y1="50.8508" x2="114.49" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="107.8484" y1="50.8508" x2="142.49" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP13">
 <contactref element="CN13" pad="6"/>
@@ -1190,7 +1144,7 @@ design rules under a new name.</description>
 <wire x1="100.6348" y1="63.4492" x2="100.9904" y2="62.1792" width="0.1778" layer="1"/>
 <wire x1="100.9904" y1="62.1792" x2="105.3592" y2="59.2836" width="0.1778" layer="1"/>
 <wire x1="105.3592" y1="59.2836" x2="110.3884" y2="55.3212" width="0.1778" layer="1"/>
-<wire x1="110.3884" y1="55.3212" x2="134.64839375" y2="50.0803625" width="0" layer="19" extent="1-16"/>
+<wire x1="110.3884" y1="55.3212" x2="138.64839375" y2="88.0803625" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS6">
 <contactref element="CN6" pad="2"/>
@@ -1207,7 +1161,7 @@ design rules under a new name.</description>
 <wire x1="91.7448" y1="55.5244" x2="96.3676" y2="52.7812" width="0.1778" layer="16"/>
 <wire x1="96.3676" y1="52.7812" x2="100.7872" y2="49.7332" width="0.1778" layer="16"/>
 <wire x1="100.7872" y1="49.7332" x2="104.6988" y2="46.482" width="0.1778" layer="16"/>
-<wire x1="104.6988" y1="46.482" x2="106.87" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="104.6988" y1="46.482" x2="134.87" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP6">
 <contactref element="CN6" pad="6"/>
@@ -1224,14 +1178,14 @@ design rules under a new name.</description>
 <wire x1="92.0496" y1="56.2864" x2="96.774" y2="53.4924" width="0.1778" layer="1"/>
 <wire x1="96.774" y1="53.4924" x2="101.1936" y2="50.4444" width="0.1778" layer="1"/>
 <wire x1="101.1936" y1="50.4444" x2="105.0544" y2="47.244" width="0.1778" layer="1"/>
-<wire x1="105.0544" y1="47.244" x2="126.61920625" y2="49.8609875" width="0" layer="19" extent="1-16"/>
+<wire x1="105.0544" y1="47.244" x2="130.61920625" y2="87.8609875" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS14">
 <contactref element="CN14" pad="2"/>
 <contactref element="JP2" pad="15"/>
 <wire x1="101.102640625" y1="57.563059375" x2="103.8352" y2="57.2008" width="0.1778" layer="16"/>
 <wire x1="103.8352" y1="57.2008" x2="109.1692" y2="53.086" width="0.1778" layer="16"/>
-<wire x1="109.1692" y1="53.086" x2="117.03" y2="25.75" width="0" layer="19" extent="1-16"/>
+<wire x1="109.1692" y1="53.086" x2="145.03" y2="77.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP14">
 <contactref element="CN14" pad="6"/>
@@ -1239,7 +1193,7 @@ design rules under a new name.</description>
 <wire x1="106.56160625" y1="66.13191875" x2="107.8992" y2="62.5856" width="0.1778" layer="1"/>
 <wire x1="107.8992" y1="62.5856" x2="108.9152" y2="59.7408" width="0.1778" layer="1"/>
 <wire x1="108.9152" y1="59.7408" x2="111.8108" y2="57.5056" width="0.1778" layer="1"/>
-<wire x1="111.8108" y1="57.5056" x2="136.166484375" y2="53.3359125" width="0" layer="19" extent="1-16"/>
+<wire x1="111.8108" y1="57.5056" x2="140.166484375" y2="91.3359125" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS7">
 <contactref element="CN7" pad="2"/>
@@ -1255,7 +1209,7 @@ design rules under a new name.</description>
 <wire x1="91.8972" y1="55.88" x2="96.5708" y2="53.1368" width="0.1778" layer="16"/>
 <wire x1="96.5708" y1="53.1368" x2="100.9904" y2="50.0888" width="0.1778" layer="16"/>
 <wire x1="100.9904" y1="50.0888" x2="104.9528" y2="46.7868" width="0.1778" layer="16"/>
-<wire x1="104.9528" y1="46.7868" x2="106.87" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="104.9528" y1="46.7868" x2="134.87" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP7">
 <contactref element="CN7" pad="6"/>
@@ -1271,20 +1225,20 @@ design rules under a new name.</description>
 <wire x1="92.202" y1="56.642" x2="96.9772" y2="53.848" width="0.1778" layer="1"/>
 <wire x1="96.9772" y1="53.848" x2="101.3968" y2="50.8" width="0.1778" layer="1"/>
 <wire x1="101.3968" y1="50.8" x2="105.3084" y2="47.5488" width="0.1778" layer="1"/>
-<wire x1="105.3084" y1="47.5488" x2="127.4879375" y2="47.47416875" width="0" layer="19" extent="1-16"/>
+<wire x1="105.3084" y1="47.5488" x2="131.4879375" y2="85.47416875" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="CS15">
 <contactref element="CN15" pad="2"/>
 <contactref element="JP2" pad="16"/>
 <wire x1="105.8613125" y1="54.053690625" x2="108.8136" y2="51.7652" width="0.1778" layer="16"/>
-<wire x1="108.8136" y1="51.7652" x2="117.03" y2="28.29" width="0" layer="19" extent="1-16"/>
+<wire x1="108.8136" y1="51.7652" x2="145.03" y2="80.29" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="COMP15">
 <contactref element="CN15" pad="6"/>
 <contactref element="JP1" pad="12"/>
 <wire x1="112.046328125" y1="62.1141625" x2="112.046328125" y2="60.267271875" width="0.1778" layer="1"/>
 <wire x1="112.046328125" y1="60.267271875" x2="113.1824" y2="59.3344" width="0.1778" layer="1"/>
-<wire x1="113.1824" y1="59.3344" x2="137.035215625" y2="50.949090625" width="0" layer="19" extent="1-16"/>
+<wire x1="113.1824" y1="59.3344" x2="141.035215625" y2="88.949090625" width="0" layer="19" extent="1-16"/>
 </signal>
 </signals>
 </board>
