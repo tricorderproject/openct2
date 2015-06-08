@@ -275,6 +275,16 @@ chip</description>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
+<symbol name="CAP">
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
+<text x="1.524" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.524" y="-2.159" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
+<rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="RADIATION-SENSOR-REV1">
@@ -345,6 +355,42 @@ chip</description>
 Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (small) resistors.</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0402" package="C0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0805" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
 </gates>
 <devices>
 <device name="0603" package="0603">
@@ -1153,6 +1199,70 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="con-molex">
+<description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="22-23-2041">
+<description>.100" (2.54mm) Center Header - 4 Pin</description>
+<wire x1="-5.08" y1="3.175" x2="5.08" y2="3.175" width="0.254" layer="21"/>
+<wire x1="5.08" y1="3.175" x2="5.08" y2="1.27" width="0.254" layer="21"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="5.08" y1="-3.175" x2="-5.08" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="-3.175" x2="-5.08" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="-5.08" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-5.08" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MV">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="M">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="22-23-2041" prefix="X">
+<description>.100" (2.54mm) Center Header - 4 Pin</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="22-23-2041">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="22-23-2041" constant="no"/>
+<attribute name="OC_FARNELL" value="1462920" constant="no"/>
+<attribute name="OC_NEWARK" value="38C0355" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1232,11 +1342,16 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <part name="GND17" library="openct" deviceset="GND" device=""/>
 <part name="GND18" library="openct" deviceset="GND" device=""/>
 <part name="R1" library="openct" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="C1" library="openct" deviceset="CAP" device="0603"/>
+<part name="GND19" library="openct" deviceset="GND" device=""/>
+<part name="X2" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="U$17" library="openct" deviceset="VBIAS" device=""/>
+<part name="U$34" library="openct" deviceset="5V" device=""/>
+<part name="GND20" library="openct" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="231.14" y="-205.74" size="1.778" layer="91">VTEMP</text>
 </plain>
 <instances>
 <instance part="CN7" gate="G$1" x="15.24" y="-236.22"/>
@@ -1331,6 +1446,15 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <instance part="GND17" gate="1" x="220.98" y="-218.44"/>
 <instance part="GND18" gate="1" x="259.08" y="-167.64"/>
 <instance part="R1" gate="G$1" x="256.54" y="-119.38"/>
+<instance part="C1" gate="G$1" x="241.3" y="-119.38"/>
+<instance part="GND19" gate="1" x="241.3" y="-124.46"/>
+<instance part="X2" gate="-1" x="200.66" y="-248.92" rot="R180"/>
+<instance part="X2" gate="-2" x="200.66" y="-246.38" rot="R180"/>
+<instance part="X2" gate="-3" x="200.66" y="-243.84" rot="R180"/>
+<instance part="X2" gate="-4" x="200.66" y="-241.3" rot="R180"/>
+<instance part="U$17" gate="G$1" x="208.28" y="-236.22"/>
+<instance part="U$34" gate="G$1" x="208.28" y="-254" rot="R180"/>
+<instance part="GND20" gate="1" x="220.98" y="-254"/>
 </instances>
 <busses>
 </busses>
@@ -1455,6 +1579,21 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <junction x="259.08" y="-147.32"/>
 <junction x="259.08" y="-149.86"/>
 </segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-2" pin="S"/>
+<wire x1="203.2" y1="-246.38" x2="208.28" y2="-246.38" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-246.38" x2="208.28" y2="-243.84" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-243.84" x2="220.98" y2="-243.84" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-243.84" x2="220.98" y2="-251.46" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-3" pin="S"/>
+<wire x1="203.2" y1="-243.84" x2="208.28" y2="-243.84" width="0.1524" layer="91"/>
+<junction x="208.28" y="-243.84"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="5V" class="0">
 <segment>
@@ -1553,6 +1692,12 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <wire x1="106.68" y1="-243.84" x2="106.68" y2="-251.46" width="0.1524" layer="91"/>
 <pinref part="U$16" gate="G$1" pin="5V"/>
 </segment>
+<segment>
+<pinref part="X2" gate="-1" pin="S"/>
+<wire x1="203.2" y1="-248.92" x2="208.28" y2="-248.92" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-248.92" x2="208.28" y2="-254" width="0.1524" layer="91"/>
+<pinref part="U$34" gate="G$1" pin="5V"/>
+</segment>
 </net>
 <net name="VBIAS" class="0">
 <segment>
@@ -1650,6 +1795,12 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <wire x1="91.44" y1="-246.38" x2="99.06" y2="-246.38" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="-246.38" x2="99.06" y2="-251.46" width="0.1524" layer="91"/>
 <pinref part="U$33" gate="G$1" pin="VBIAS"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-4" pin="S"/>
+<wire x1="203.2" y1="-241.3" x2="208.28" y2="-241.3" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-241.3" x2="208.28" y2="-236.22" width="0.1524" layer="91"/>
+<pinref part="U$17" gate="G$1" pin="VBIAS"/>
 </segment>
 </net>
 <net name="CS0" class="0">
@@ -2210,16 +2361,28 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <label x="210.82" y="-190.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="VTEMP4" class="0">
 <segment>
 <pinref part="X1" gate="-21" pin="KL"/>
-<wire x1="205.74" y1="-203.2" x2="228.6" y2="-203.2" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="-203.2" x2="215.9" y2="-203.2" width="0.1524" layer="91"/>
+<label x="210.82" y="-203.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CN4" gate="G$1" pin="VTEMP"/>
+<wire x1="27.94" y1="-111.76" x2="38.1" y2="-111.76" width="0.1524" layer="91"/>
+<label x="33.02" y="-111.76" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$20" class="0">
+<net name="VTEMP11" class="0">
 <segment>
 <pinref part="X1" gate="-22" pin="KL"/>
-<wire x1="205.74" y1="-205.74" x2="228.6" y2="-205.74" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="-205.74" x2="215.9" y2="-205.74" width="0.1524" layer="91"/>
+<label x="210.82" y="-205.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CN11" gate="G$1" pin="VTEMP"/>
+<wire x1="91.44" y1="-73.66" x2="101.6" y2="-73.66" width="0.1524" layer="91"/>
+<label x="96.52" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VLOGIC" class="0">
@@ -2233,10 +2396,13 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <wire x1="264.16" y1="-114.3" x2="248.92" y2="-114.3" width="0.1524" layer="91"/>
 <label x="236.22" y="-114.3" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="248.92" y1="-114.3" x2="236.22" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="-114.3" x2="241.3" y2="-114.3" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="-114.3" x2="236.22" y2="-114.3" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="-119.38" x2="248.92" y2="-119.38" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="-119.38" x2="248.92" y2="-114.3" width="0.1524" layer="91"/>
 <junction x="248.92" y="-114.3"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<junction x="241.3" y="-114.3"/>
 </segment>
 </net>
 <net name="SCL" class="0">
