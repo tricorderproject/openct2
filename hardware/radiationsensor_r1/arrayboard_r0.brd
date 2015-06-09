@@ -128,9 +128,12 @@
 </layers>
 <board>
 <plain>
-<wire x1="63.5" y1="59.75" x2="63.5" y2="91.3" width="0.4064" layer="22"/>
-<wire x1="40.25" y1="55" x2="16.95" y2="78.3" width="0.4064" layer="22"/>
-<wire x1="85" y1="53.25" x2="110.05" y2="78.3" width="0.4064" layer="22"/>
+<wire x1="63.5" y1="90" x2="63.5" y2="91.25" width="0.4064" layer="22" style="shortdash"/>
+<wire x1="63.5" y1="91.25" x2="63.5" y2="91.3" width="0.4064" layer="22" style="shortdash"/>
+<wire x1="18" y1="77.25" x2="17" y2="78.25" width="0.4064" layer="22" style="shortdash"/>
+<wire x1="17" y1="78.25" x2="16.95" y2="78.3" width="0.4064" layer="22" style="shortdash"/>
+<wire x1="109" y1="77.25" x2="110" y2="78.25" width="0.4064" layer="22" style="shortdash"/>
+<wire x1="110" y1="78.25" x2="110.05" y2="78.3" width="0.4064" layer="22" style="shortdash"/>
 <wire x1="0" y1="0" x2="127" y2="0" width="0.01" layer="48" curve="-180"/>
 <wire x1="-31.75" y1="0" x2="158.75" y2="0" width="0.4064" layer="48" curve="-180"/>
 <wire x1="-15.875" y1="0" x2="142.875" y2="0" width="0.01" layer="48" curve="-180"/>
@@ -164,6 +167,9 @@
 <text x="121.25" y="54.25" size="1.016" layer="21" rot="R45">GND</text>
 <text x="104.5" y="24.25" size="1.016" layer="21">Imaging Array Board (r0)</text>
 <text x="104.5" y="22.25" size="1.016" layer="21">Peter Jansen/June 2015</text>
+<wire x1="17" y1="78.25" x2="18" y2="77.25" width="0.4064" layer="22"/>
+<wire x1="63.5" y1="91.25" x2="63.5" y2="90" width="0.4064" layer="22"/>
+<wire x1="110" y1="78.25" x2="109" y2="77.25" width="0.4064" layer="22"/>
 </plain>
 <libraries>
 <library name="openct">
@@ -447,7 +453,7 @@ design rules under a new name.</description>
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="40mil"/>
+<param name="mdCopperDimension" value="20mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="7mil"/>
@@ -1466,8 +1472,8 @@ design rules under a new name.</description>
 <contactref element="CN11" pad="1"/>
 <wire x1="84.22980625" y1="63.112653125" x2="82.625" y2="65.5" width="0.1778" layer="1"/>
 <wire x1="82.625" y1="65.5" x2="88.75" y2="85" width="0.1778" layer="1"/>
-<wire x1="88.75" y1="85" x2="90.625" y2="85.625" width="0.1778" layer="1"/>
-<wire x1="90.625" y1="85.625" x2="97.375" y2="83.125" width="0.1778" layer="1"/>
+<wire x1="88.75" y1="85" x2="90.5742" y2="85.5742" width="0.1778" layer="1"/>
+<wire x1="90.5742" y1="85.5742" x2="97.375" y2="83.125" width="0.1778" layer="1"/>
 <wire x1="97.375" y1="83.125" x2="104.375" y2="79.75" width="0.1778" layer="1"/>
 <wire x1="104.375" y1="79.75" x2="111" y2="75.875" width="0.1778" layer="1"/>
 <wire x1="111" y1="75.875" x2="120.5" y2="68.875" width="0.1778" layer="1"/>
