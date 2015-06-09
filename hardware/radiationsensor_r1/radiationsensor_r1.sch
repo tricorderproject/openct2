@@ -277,6 +277,13 @@ chip</description>
 <pad name="8" x="7.62" y="-0.127" drill="1.016" diameter="1.778" rot="R90"/>
 <pad name="9" x="10.16" y="0.127" drill="1.016" diameter="1.778" rot="R90"/>
 </package>
+<package name="GROUND-PAD">
+<smd name="GND" x="0" y="0" dx="3" dy="2" layer="1" rot="R90"/>
+<wire x1="-1.5" y1="2" x2="-1.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-2" x2="1.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-2" x2="1.5" y2="2" width="0.127" layer="21"/>
+<wire x1="1.5" y1="2" x2="-1.5" y2="2" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PHOTODIODE">
@@ -445,6 +452,20 @@ chip</description>
 <pin name="7" x="7.62" y="-5.08" length="middle" rot="R180"/>
 <pin name="8" x="7.62" y="-7.62" length="middle" rot="R180"/>
 <pin name="9" x="7.62" y="-10.16" length="middle" rot="R180"/>
+</symbol>
+<symbol name="GROUND-PAD">
+<pin name="1" x="5.08" y="0" visible="pad" length="middle" rot="R180"/>
+<wire x1="0" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.905" x2="-2.54" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-3.175" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.254" layer="94"/>
+<text x="-7.62" y="5.715" size="1.6764" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.6764" layer="95">SHIELD</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -690,6 +711,22 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </device>
 </devices>
 </deviceset>
+<deviceset name="GROUND-PAD">
+<description>Ground pad for connection to shield</description>
+<gates>
+<gate name="G$1" symbol="GROUND-PAD" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="GROUND-PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="GND"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -778,6 +815,8 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <part name="C16" library="openct" deviceset="CAP" device="0603" value="1uF"/>
 <part name="U$6" library="openct" deviceset="5V" device=""/>
 <part name="GND16" library="openct" deviceset="GND" device=""/>
+<part name="CN2" library="openct" deviceset="GROUND-PAD" device=""/>
+<part name="GND18" library="openct" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -884,14 +923,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="GND13" gate="1" x="162.56" y="-71.12"/>
 <instance part="C13" gate="G$1" x="205.74" y="-66.04"/>
 <instance part="GND14" gate="1" x="205.74" y="-71.12"/>
-<instance part="C14" gate="G$1" x="119.38" y="-58.42"/>
-<instance part="GND19" gate="1" x="119.38" y="-63.5"/>
-<instance part="U$1" gate="G$1" x="91.44" y="-53.34"/>
-<instance part="C15" gate="G$1" x="91.44" y="-58.42"/>
-<instance part="GND20" gate="1" x="91.44" y="-63.5"/>
+<instance part="C14" gate="G$1" x="119.38" y="-50.8"/>
+<instance part="GND19" gate="1" x="119.38" y="-55.88"/>
+<instance part="U$1" gate="G$1" x="91.44" y="-45.72"/>
+<instance part="C15" gate="G$1" x="91.44" y="-50.8"/>
+<instance part="GND20" gate="1" x="91.44" y="-55.88"/>
 <instance part="D1" gate="G$1" x="-27.94" y="5.08" rot="R180"/>
 <instance part="U$14" gate="G$1" x="162.56" y="-48.26"/>
-<instance part="U$15" gate="G$1" x="119.38" y="-53.34"/>
+<instance part="U$15" gate="G$1" x="119.38" y="-45.72"/>
 <instance part="R16" gate="G$1" x="43.18" y="-60.96" rot="R90"/>
 <instance part="GND15" gate="1" x="43.18" y="-68.58"/>
 <instance part="R17" gate="G$1" x="43.18" y="-45.72" rot="R90"/>
@@ -900,9 +939,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <instance part="GND17" gate="1" x="7.62" y="-71.12"/>
 <instance part="U$22" gate="G$1" x="0" y="-68.58" rot="R180"/>
 <instance part="U$23" gate="G$1" x="-7.62" y="-68.58" rot="R180"/>
-<instance part="C16" gate="G$1" x="109.22" y="-58.42"/>
-<instance part="U$6" gate="G$1" x="109.22" y="-53.34"/>
-<instance part="GND16" gate="1" x="109.22" y="-63.5"/>
+<instance part="C16" gate="G$1" x="109.22" y="-50.8"/>
+<instance part="U$6" gate="G$1" x="109.22" y="-45.72"/>
+<instance part="GND16" gate="1" x="109.22" y="-55.88"/>
+<instance part="CN2" gate="G$1" x="96.52" y="-73.66"/>
+<instance part="GND18" gate="1" x="111.76" y="-73.66" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1043,6 +1084,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 <segment>
 <pinref part="C16" gate="G$1" pin="2"/>
 <pinref part="GND16" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CN2" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="-73.66" x2="109.22" y2="-73.66" width="0.1524" layer="91"/>
+<pinref part="GND18" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="5V" class="0">
