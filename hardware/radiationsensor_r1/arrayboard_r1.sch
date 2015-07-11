@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1472,8 +1472,8 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <instance part="CN17" gate="-2" x="175.26" y="-208.28" rot="R180"/>
 <instance part="CN17" gate="-3" x="175.26" y="-205.74" rot="R180"/>
 <instance part="CN17" gate="-4" x="175.26" y="-203.2" rot="R180"/>
-<instance part="U$17" gate="G$1" x="182.88" y="-198.12"/>
-<instance part="U$34" gate="G$1" x="182.88" y="-215.9" rot="R180"/>
+<instance part="U$17" gate="G$1" x="182.88" y="-215.9" rot="R180"/>
+<instance part="U$34" gate="G$1" x="182.88" y="-198.12"/>
 <instance part="GND20" gate="1" x="195.58" y="-215.9"/>
 </instances>
 <busses>
@@ -1713,10 +1713,10 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <pinref part="U$16" gate="G$1" pin="5V"/>
 </segment>
 <segment>
-<pinref part="CN17" gate="-1" pin="S"/>
-<wire x1="177.8" y1="-210.82" x2="182.88" y2="-210.82" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="-210.82" x2="182.88" y2="-215.9" width="0.1524" layer="91"/>
+<pinref part="CN17" gate="-4" pin="S"/>
+<wire x1="177.8" y1="-203.2" x2="182.88" y2="-203.2" width="0.1524" layer="91"/>
 <pinref part="U$34" gate="G$1" pin="5V"/>
+<wire x1="182.88" y1="-203.2" x2="182.88" y2="-198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBIAS" class="0">
@@ -1817,10 +1817,10 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/21952a.pdf</description>
 <pinref part="U$33" gate="G$1" pin="VBIAS"/>
 </segment>
 <segment>
-<pinref part="CN17" gate="-4" pin="S"/>
-<wire x1="177.8" y1="-203.2" x2="182.88" y2="-203.2" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="-203.2" x2="182.88" y2="-198.12" width="0.1524" layer="91"/>
+<pinref part="CN17" gate="-1" pin="S"/>
+<wire x1="177.8" y1="-210.82" x2="182.88" y2="-210.82" width="0.1524" layer="91"/>
 <pinref part="U$17" gate="G$1" pin="VBIAS"/>
+<wire x1="182.88" y1="-210.82" x2="182.88" y2="-215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CS0" class="0">
