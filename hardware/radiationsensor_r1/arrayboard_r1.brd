@@ -132,9 +132,6 @@
 <text x="118.314396875" y="77.82349375" size="1.016" layer="21" rot="R72">VBIAS</text>
 <text x="110.86465" y="80.1555" size="1.016" layer="21" rot="R72">5V</text>
 <text x="116.078653125" y="79.596759375" size="1.016" layer="21" rot="SR162">GND</text>
-<wire x1="75.7" y1="93.3" x2="75.7" y2="30.3" width="0.4064" layer="21"/>
-<wire x1="25.7" y1="97.3" x2="25.7" y2="27.3" width="0.4064" layer="21"/>
-<wire x1="125.7" y1="97.3" x2="125.7" y2="27.3" width="0.4064" layer="21"/>
 <circle x="76.2" y="0" radius="38.1" width="0.4064" layer="48"/>
 <circle x="76.2" y="-41.275" radius="82.55" width="0.4064" layer="48"/>
 <wire x1="76.2" y1="92.075" x2="76.2" y2="-41.275" width="0.4064" layer="48"/>
