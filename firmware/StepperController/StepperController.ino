@@ -21,7 +21,7 @@
 
 // Error messages
 #define SERIAL_WELCOME_MESSAGE        "OpenCT2 Motion Controller"
-#define SERIAL_WELCOME_MESSAGE2       "Format: <char> <int>, where <char> = r,s and <int> = -255 to 255"
+#define SERIAL_WELCOME_MESSAGE2       "Format: <char> <int>, where <char> = R,S and <int> = -255 to 255"
 #define SERIAL_PARSE_ERROR            "UNRECOGNIZED INPUT"
 #define SERIAL_SUCCESSFUL_COMMAND     "OK"
 #define SERIAL_PROMPT                 "> "
