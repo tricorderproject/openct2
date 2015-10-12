@@ -4,7 +4,7 @@
 // Usage: Accepts serial commands of the form <char> <int_argument> <optional int_argument>, 
 // Where: A <1-255> sets the digipot threshold for all channels
 // D <1-16> <1-255> sets the digipot threshold for a particular channel (1-16)
-// I <1-255> measures/integrates from all channels for 1-255 seconds, and displays the results
+// I <1-600> measures/integrates from all channels for 1-600 seconds, and displays the results
 //
 // Requires: Adafruit MCP23017 and MCP23008 I/O Expander Libraries
 
@@ -417,7 +417,7 @@ void readAllChannels(unsigned long integrationTimeSec, boolean withHist) {
   clearCounts();
   
   // Ensure that the integration time is specified in seconds, and not excessively large
-  if (integrationTimeSec > 255) {
+  if (integrationTimeSec > 600) {
     Serial.println("ERROR: INTEGRATION TIME TOO LARGE"); 
   }
   
@@ -487,7 +487,7 @@ int parseSerialCommand(String in) {
   char commandChar = 0; 
   intArgument1.trim();
   int argument1 = intArgument1.toInt();
-  argument1 = constrain(argument1, 0, 255);    // Clip argument to range (0, 255)
+  argument1 = constrain(argument1, 0, 600);    // Clip argument to range (0, 600)
   intArgument2.trim();
   int argument2 = intArgument2.toInt();
   argument2 = constrain(argument2, 0, 255);    // Clip argument to range (0, 255)
@@ -521,6 +521,12 @@ int parseSerialCommand(String in) {
     
     // Set digipot value for all sensor channels
     case 'A':
+      if ((argument1 <= 0) || (argument1 > 255)) {
+        Serial.println("DIGIPOT VALUE MUST BE BETWEEN 1 AND 255");
+        Serial.println(SERIAL_PARSE_ERROR);
+        return -1;
+      } 
+      
       setAllDigipotChannels(argument1);
       Serial.print ("Set digipot values on all channels to ");
       Serial.println(argument1);
