@@ -1767,7 +1767,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="IC2" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="SINK"/>
 <part name="IC3" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="SINK"/>
 <part name="IC4" library="SparkFun-PowerIC" deviceset="V_REG_78XX" device="SINK"/>
-<part name="U$5" library="openct" deviceset="SCREWTERMINAL-2PIN" device=""/>
+<part name="CN6" library="openct" deviceset="SCREWTERMINAL-2PIN" device=""/>
 <part name="F1" library="SparkFun-Passives" deviceset="FUSE" device="X20MM"/>
 <part name="F2" library="SparkFun-Passives" deviceset="FUSE" device="X20MM"/>
 <part name="F3" library="SparkFun-Passives" deviceset="FUSE" device="X20MM"/>
@@ -1787,13 +1787,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <part name="GND6" library="openct" deviceset="GND" device=""/>
 <part name="GND7" library="openct" deviceset="GND" device=""/>
 <part name="GND8" library="openct" deviceset="GND" device=""/>
-<part name="CN17" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="CN4" library="con-molex" deviceset="22-23-2041" device=""/>
 <part name="U$17" library="openct" deviceset="VBIAS" device=""/>
 <part name="GND20" library="openct" deviceset="GND" device=""/>
-<part name="U$6" library="openct" deviceset="CON-USB" device=""/>
-<part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT"/>
-<part name="U$1" library="openct" deviceset="SCREWTERMINAL-2PIN" device=""/>
+<part name="CN2" library="openct" deviceset="CON-USB" device=""/>
+<part name="CN3" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT"/>
+<part name="CN1" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-VERT"/>
+<part name="CN5" library="openct" deviceset="SCREWTERMINAL-2PIN" device=""/>
 <part name="U$2" library="openct" deviceset="VBIAS" device=""/>
 <part name="GND9" library="openct" deviceset="GND" device=""/>
 <part name="C7" library="SparkFun-Passives" deviceset="CAP_POL" device="PTH1"/>
@@ -1830,7 +1830,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="IC2" gate="G$1" x="35.56" y="-12.7"/>
 <instance part="IC3" gate="G$1" x="35.56" y="-40.64"/>
 <instance part="IC4" gate="G$1" x="35.56" y="-68.58"/>
-<instance part="U$5" gate="G$1" x="-53.34" y="-7.62"/>
+<instance part="CN6" gate="G$1" x="-53.34" y="-7.62"/>
 <instance part="F1" gate="G$1" x="68.58" y="12.7"/>
 <instance part="F2" gate="G$1" x="68.58" y="-12.7"/>
 <instance part="F3" gate="G$1" x="68.58" y="-40.64"/>
@@ -1850,16 +1850,16 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <instance part="GND6" gate="1" x="35.56" y="-22.86"/>
 <instance part="GND7" gate="1" x="35.56" y="-50.8"/>
 <instance part="GND8" gate="1" x="35.56" y="-78.74"/>
-<instance part="CN17" gate="-1" x="106.68" y="-83.82" rot="R180"/>
-<instance part="CN17" gate="-2" x="106.68" y="-81.28" rot="R180"/>
-<instance part="CN17" gate="-3" x="106.68" y="-78.74" rot="R180"/>
-<instance part="CN17" gate="-4" x="106.68" y="-76.2" rot="R180"/>
+<instance part="CN4" gate="-1" x="106.68" y="-83.82" rot="R180"/>
+<instance part="CN4" gate="-2" x="106.68" y="-81.28" rot="R180"/>
+<instance part="CN4" gate="-3" x="106.68" y="-78.74" rot="R180"/>
+<instance part="CN4" gate="-4" x="106.68" y="-76.2" rot="R180"/>
 <instance part="U$17" gate="G$1" x="114.3" y="-88.9" rot="R180"/>
 <instance part="GND20" gate="1" x="127" y="-88.9"/>
-<instance part="U$6" gate="G$1" x="121.92" y="-17.78"/>
-<instance part="JP3" gate="G$1" x="106.68" y="-40.64" rot="R180"/>
-<instance part="JP1" gate="G$1" x="106.68" y="12.7" rot="R180"/>
-<instance part="U$1" gate="G$1" x="127" y="-129.54"/>
+<instance part="CN2" gate="G$1" x="121.92" y="-17.78"/>
+<instance part="CN3" gate="G$1" x="106.68" y="-40.64" rot="R180"/>
+<instance part="CN1" gate="G$1" x="106.68" y="12.7" rot="R180"/>
+<instance part="CN5" gate="G$1" x="127" y="-129.54"/>
 <instance part="U$2" gate="G$1" x="114.3" y="-119.38"/>
 <instance part="GND9" gate="1" x="114.3" y="-142.24"/>
 <instance part="C7" gate="G$1" x="104.14" y="-134.62"/>
@@ -1908,18 +1908,18 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="CN17" gate="-2" pin="S"/>
+<pinref part="CN4" gate="-2" pin="S"/>
 <wire x1="109.22" y1="-81.28" x2="114.3" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-81.28" x2="114.3" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-78.74" x2="127" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="127" y1="-78.74" x2="127" y2="-86.36" width="0.1524" layer="91"/>
-<pinref part="CN17" gate="-3" pin="S"/>
+<pinref part="CN4" gate="-3" pin="S"/>
 <wire x1="109.22" y1="-78.74" x2="114.3" y2="-78.74" width="0.1524" layer="91"/>
 <junction x="114.3" y="-78.74"/>
 <pinref part="GND20" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="2"/>
+<pinref part="CN5" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="-132.08" x2="114.3" y2="-132.08" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-132.08" x2="114.3" y2="-139.7" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
@@ -1929,19 +1929,19 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="CN1" gate="G$1" pin="2"/>
 <wire x1="99.06" y1="10.16" x2="96.52" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="10.16" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="GND"/>
+<pinref part="CN2" gate="G$1" pin="GND"/>
 <wire x1="116.84" y1="-20.32" x2="111.76" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-20.32" x2="111.76" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="CN3" gate="G$1" pin="2"/>
 <wire x1="99.06" y1="-43.18" x2="96.52" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="-43.18" x2="96.52" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
@@ -2007,13 +2007,13 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </net>
 <net name="VBIAS" class="0">
 <segment>
-<pinref part="CN17" gate="-1" pin="S"/>
+<pinref part="CN4" gate="-1" pin="S"/>
 <wire x1="109.22" y1="-83.82" x2="114.3" y2="-83.82" width="0.1524" layer="91"/>
 <pinref part="U$17" gate="G$1" pin="VBIAS"/>
 <wire x1="114.3" y1="-83.82" x2="114.3" y2="-88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="1"/>
+<pinref part="CN5" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="-127" x2="114.3" y2="-127" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-127" x2="114.3" y2="-119.38" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="VBIAS"/>
@@ -2025,7 +2025,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="CN17" gate="-4" pin="S"/>
+<pinref part="CN4" gate="-4" pin="S"/>
 <wire x1="109.22" y1="-76.2" x2="114.3" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="-76.2" x2="114.3" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="F4" gate="G$1" pin="2"/>
@@ -2035,27 +2035,27 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <net name="N$8" class="0">
 <segment>
 <pinref part="F1" gate="G$1" pin="2"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="CN1" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="12.7" x2="99.06" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="F2" gate="G$1" pin="2"/>
-<pinref part="U$6" gate="G$1" pin="VCC"/>
+<pinref part="CN2" gate="G$1" pin="VCC"/>
 <wire x1="78.74" y1="-12.7" x2="116.84" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="F3" gate="G$1" pin="2"/>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="CN3" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="-40.64" x2="99.06" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="2"/>
+<pinref part="CN6" gate="G$1" pin="2"/>
 <wire x1="-63.5" y1="-10.16" x2="-68.58" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="-10.16" x2="-68.58" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="F5" gate="G$1" pin="1"/>
@@ -2064,7 +2064,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="1"/>
+<pinref part="CN6" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="-5.08" x2="-68.58" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="-5.08" x2="-68.58" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="IN"/>
