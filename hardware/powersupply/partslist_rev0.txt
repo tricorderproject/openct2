@@ -1,0 +1,17 @@
+CN1, CN3	JST Connector	B2B-PH-K-S(LF)(SN)
++ Cables (from Sparkfun?)
+
+CN2		USB Connector	Molex 105057-0001		
+
+CN4		Imaging Array Connector		A33896-ND
+
+CN5, CN6	5mm pitch Screw Terminals			TODO
+
+C3-C6		Capacitors	5mm dia, 47uF, 16V	(ECA-1EHG470)
+C7		Capacitor	5mm dia, 100V		(ECA-2AM100)
+C1-C2		Capacitors	10mm dia, 25V 		(ECA-1VM471)
+
+
+IC1-4		2A Linear Regulators	L78S05CV-DG
+
+F1-5		20mm/5mm Fuse Clips (qty 10)
