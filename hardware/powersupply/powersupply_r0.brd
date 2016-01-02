@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="39.3700787" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -349,7 +349,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="default *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -421,7 +421,7 @@ design rules under a new name.</description>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
-<param name="slThermalIsolate" value="10mil"/>
+<param name="slThermalIsolate" value="12mil"/>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
@@ -574,23 +574,34 @@ design rules under a new name.</description>
 <contactref element="C1" pad="2"/>
 <contactref element="C2" pad="2"/>
 <contactref element="F5" pad="3"/>
-<wire x1="48.233821875" y1="70.865" x2="46.03411875" y2="72.135" width="0" layer="19" extent="1-1"/>
-<wire x1="41.73" y1="62" x2="48.233821875" y2="70.865" width="0" layer="19" extent="1-1"/>
-<wire x1="41.858971875" y1="52.023684375" x2="41.73" y2="62" width="0" layer="19" extent="1-1"/>
-<wire x1="51.255734375" y1="43.725" x2="41.858971875" y2="52.023684375" width="0" layer="19" extent="1-1"/>
-<wire x1="41.440146875" y1="35.55985" x2="51.255734375" y2="43.725" width="0" layer="19" extent="1-1"/>
-<wire x1="59.181978125" y1="57.23223125" x2="51.255734375" y2="43.725" width="0" layer="19" extent="1-1"/>
-<wire x1="43.73" y1="19" x2="41.440146875" y2="35.55985" width="0" layer="19" extent="1-1"/>
-<wire x1="36.54" y1="15" x2="43.73" y2="19" width="0" layer="19" extent="1-1"/>
-<wire x1="50" y1="6" x2="43.73" y2="19" width="0" layer="19" extent="1-1"/>
-<wire x1="70.383971875" y1="42.3349375" x2="59.181978125" y2="57.23223125" width="0" layer="19" extent="1-1"/>
-<wire x1="64.73" y1="19" x2="50" y2="6" width="0" layer="19" extent="1-1"/>
-<wire x1="72" y1="6" x2="64.73" y2="19" width="0" layer="19" extent="1-1"/>
-<wire x1="19" y1="64.73" x2="41.73" y2="62" width="0" layer="19" extent="1-1"/>
-<wire x1="6" y1="72" x2="19" y2="64.73" width="0" layer="19" extent="1-1"/>
-<wire x1="6" y1="50" x2="19" y2="64.73" width="0" layer="19" extent="1-1"/>
-<wire x1="19" y1="44.73" x2="6" y2="50" width="0" layer="19" extent="1-1"/>
-<wire x1="17.54" y1="34" x2="19" y2="44.73" width="0" layer="19" extent="1-1"/>
+<polygon width="0.254" layer="16" spacing="1.778" isolate="0.6096">
+<vertex x="2" y="90"/>
+<vertex x="16" y="88"/>
+<vertex x="32" y="84"/>
+<vertex x="44" y="78"/>
+<vertex x="56" y="70"/>
+<vertex x="65" y="61"/>
+<vertex x="44" y="42"/>
+<vertex x="44" y="38"/>
+<vertex x="40" y="34"/>
+<vertex x="36" y="34"/>
+<vertex x="18" y="18"/>
+<vertex x="2" y="34"/>
+</polygon>
+<polygon width="0.254" layer="16" spacing="1.778" isolate="0.6096">
+<vertex x="90" y="2"/>
+<vertex x="88" y="16"/>
+<vertex x="86" y="26"/>
+<vertex x="80" y="40"/>
+<vertex x="76" y="48"/>
+<vertex x="67" y="59"/>
+<vertex x="46" y="40"/>
+<vertex x="42" y="40"/>
+<vertex x="38" y="36"/>
+<vertex x="38" y="32"/>
+<vertex x="20" y="16"/>
+<vertex x="34" y="2"/>
+</polygon>
 </signal>
 <signal name="N$1">
 <contactref element="IC1" pad="OUT"/>
