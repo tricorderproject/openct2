@@ -20,8 +20,8 @@
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
@@ -528,13 +528,31 @@ design rules under a new name.</description>
 <element name="F2" library="SparkFun-Passives" package="FUSE_5MM" value="FUSEX20MM" x="78.20710625" y="25.378678125"/>
 <element name="F3" library="SparkFun-Passives" package="FUSE_5MM" value="FUSEX20MM" x="25" y="56" rot="R270"/>
 <element name="F4" library="SparkFun-Passives" package="FUSE_5MM" value="FUSEX20MM" x="25" y="78.5" rot="R270"/>
-<element name="C1" library="SparkFun-Passives" package="CPOL-RADIAL-1000UF-25V" value="" x="34" y="15" rot="R180"/>
-<element name="C2" library="SparkFun-Passives" package="CPOL-RADIAL-1000UF-25V" value="" x="15" y="34" rot="R180"/>
+<element name="C1" library="SparkFun-Passives" package="CPOL-RADIAL-1000UF-25V" value="" x="34" y="15" smashed="yes" rot="R180">
+<attribute name="VALUE" x="35.905" y="19.318" size="0.8128" layer="27" rot="R180"/>
+<attribute name="NAME" x="33.238" y="21.171" size="1.016" layer="25"/>
+</element>
+<element name="C2" library="SparkFun-Passives" package="CPOL-RADIAL-1000UF-25V" value="" x="15" y="34" smashed="yes" rot="R180">
+<attribute name="VALUE" x="16.905" y="38.318" size="0.8128" layer="27" rot="R180"/>
+<attribute name="NAME" x="14.238" y="40.171" size="1.016" layer="25"/>
+</element>
 <element name="F5" library="SparkFun-Passives" package="FUSE_5MM" value="FUSEX20MM" x="38.5" y="38.5" rot="R225"/>
-<element name="C3" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="45" y="19"/>
-<element name="C4" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="66" y="19"/>
-<element name="C5" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="19" y="46" rot="R90"/>
-<element name="C6" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="19" y="66" rot="R90"/>
+<element name="C3" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="45" y="19" smashed="yes">
+<attribute name="VALUE" x="43.095" y="14.682" size="0.8128" layer="27"/>
+<attribute name="NAME" x="44.238" y="22.901" size="1.016" layer="25"/>
+</element>
+<element name="C4" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="66" y="19" smashed="yes">
+<attribute name="VALUE" x="64.095" y="14.682" size="0.8128" layer="27"/>
+<attribute name="NAME" x="65.238" y="22.901" size="1.016" layer="25"/>
+</element>
+<element name="C5" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="19" y="46" smashed="yes" rot="R90">
+<attribute name="VALUE" x="23.318" y="44.095" size="0.8128" layer="27" rot="R90"/>
+<attribute name="NAME" x="15.099" y="45.238" size="1.016" layer="25" rot="R90"/>
+</element>
+<element name="C6" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="19" y="66" smashed="yes" rot="R90">
+<attribute name="VALUE" x="23.318" y="64.095" size="0.8128" layer="27" rot="R90"/>
+<attribute name="NAME" x="15.099" y="65.238" size="1.016" layer="25" rot="R90"/>
+</element>
 <element name="CN4" library="con-molex" package="22-23-2041" value="22-23-2041" x="47.133971875" y="71.5" smashed="yes" rot="R150">
 <attribute name="OC_NEWARK" value="38C0355" x="47.133971875" y="71.5" size="1.778" layer="27" rot="R150" display="off"/>
 <attribute name="MPN" value="22-23-2041" x="47.133971875" y="71.5" size="1.778" layer="27" rot="R150" display="off"/>
@@ -550,7 +568,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="53.838125" y="46.35216875" size="1.016" layer="25" rot="R300"/>
 </element>
 <element name="CN5" library="openct" package="SCREWTERMINAL-2PIN" value="SCREWTERMINAL-2PIN" x="57.4142125" y="59" rot="R315"/>
-<element name="C7" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="43" y="62"/>
+<element name="C7" library="SparkFun-Passives" package="CPOL-RADIAL-100UF-25V" value="" x="43" y="62" smashed="yes">
+<attribute name="VALUE" x="41.095" y="57.682" size="0.8128" layer="27"/>
+<attribute name="NAME" x="42.238" y="66.151" size="1.016" layer="25"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
