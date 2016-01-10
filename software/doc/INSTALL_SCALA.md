@@ -134,3 +134,51 @@ Then eventually:
 
 
 Once this is complete, type ``exit`` to return to the console. 
+
+# Install IntelliJ IDEA
+
+IntelliJ is an excellent IDE for Java, with a Scala plugin available.  A list of recent versions can be found at: https://confluence.jetbrains.com/display/IntelliJIDEA/Previous+IntelliJ+IDEA+Releases .
+
+Here we'll download a recent version (14.1.6), which is about 200Mb in size: 
+```
+wget https://download.jetbrains.com/idea/ideaIC-14.1.6.tar.gz
+```
+
+And extract the archive: 
+```
+tar -xf ideaIC-14.1.6.tar.gz -C /usr/share/
+rm ideaIC-14.1.6.tar.gz
+```
+
+Then we can create a symbolic link to launch IDEA from the command line:
+```
+sudo ln -s /usr/share/idea-IC-141.3056.4/bin/idea.sh /bin/idea
+```
+
+Update the native file watcher to a more efficient version.  Pavel Fatin has been kind enough to supply a pre-built binary:
+```
+wget pavelfatin.com/files/fsnotifier
+chmod +x fsnotifier
+sudo cp fsnotifier /usr/share/idea-IC-141.3056.4/bin
+sudo cp fsnotifier /usr/share/idea-IC-141.3056.4/bin/fsnotifier64
+rm fsnotifier
+```
+
+We can then run the selftest to ensure that it's working correctly:
+```
+cd /usr/share/idea-IC-141.3056.4/bin
+./fsnotifier --self-test
+```
+
+The output should complete without any warnings or errors. 
+
+From here, we can run the IntelliJ IDEA from the command line: 
+```
+idea
+```
+
+IntelliJ will ask a number of first-time configuration questions.  When at the 'Customize IDEA' dialog, don't forget to install the Scala plugin!  Then click 'Start using IntelliJ IDEA'. 
+
+IntelliJ should now be installed, and accessible in X Windows from ```Menu > Programming > IntelliJ Community Edition```. 
+
+
