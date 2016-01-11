@@ -1,0 +1,1 @@
+g++ main.cpp SSD1351.cpp -o main -Wall -lwiringPi
