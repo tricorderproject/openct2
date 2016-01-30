@@ -78,7 +78,7 @@ class SSD1351 {
 
 // Pinout
 #define SSD1351_RESET       26
-#define SSD1351_DC          13
+#define SSD1351_DC          19
 #define SSD1351_SPI_CHAN    1
 
 
