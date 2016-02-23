@@ -5,6 +5,7 @@ Open Source Computed Tomography (CT) Scanner v2 <br>
 http://www.tricorderproject.org/openct <br>
 Copyright (C) 2015  Peter Jansen and the Tricorder project <br>
 peter@tricorderproject.org <br>
+Project Build Logs: https://hackaday.io/project/5946-openct2 <br>
 
 # Introduction
 
