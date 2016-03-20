@@ -9,7 +9,11 @@
 
 #include <Wire.h>
 #include <Adafruit_MotorShield.h>
-#include "utility/Adafruit_PWMServoDriver.h"
+#include <Adafruit_PWMServoDriver.h>
+
+// Pin Definitions
+#define SWITCH_ZHOMELIMIT   12
+#define SWITCH_ZTOPLIMIT    13
 
 // Constants
 #define Z_AXIS  1
@@ -18,6 +22,9 @@
 // Step modes in the stepper driver.  Valid modes are: SINGLE, DOUBLE, INTERLEAVE, MICROSTEP
 #define Z_STEP_MODE   DOUBLE
 #define R_STEP_MODE   INTERLEAVE
+
+// Scaling factor for Z axis
+#define ZSCALE  10
 
 // Error messages
 #define SERIAL_WELCOME_MESSAGE        "OpenCT2 Motion Controller"
@@ -36,18 +43,27 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 Adafruit_StepperMotor *zAxisMotor = AFMS.getStepper(200, 2);
 Adafruit_StepperMotor *rAxisMotor = AFMS.getStepper(200, 1);
 
+
+
 // Moves the Z or R axes
 void moveAxes(int whichAxis, int distance) {
-  int zScale = 10;
   
   switch(whichAxis) {
     case Z_AXIS:
       // The Z axis has a fine pitched lead screw, so multiply the distance by zScale so that we don't have to 
       // send large numbers over the serial console    
       if (distance > 0) {
-        zAxisMotor->step(distance * zScale, FORWARD, Z_STEP_MODE); 
+        for (int i=0; i<distance; i++) {
+          if (limitTop() == false) {
+            zAxisMotor->step(1 * ZSCALE, FORWARD, Z_STEP_MODE);
+          }
+        }
       } else {
-        zAxisMotor->step(-distance * zScale, BACKWARD, Z_STEP_MODE);       
+        for (int i=0; i<-distance; i++) {
+          if (limitHome() == false) {
+            zAxisMotor->step(1 * ZSCALE, BACKWARD, Z_STEP_MODE);   
+          }
+        }    
       }
       
       // Turn off Z stepper 
@@ -127,6 +143,10 @@ int parseSerialCommand(String in) {
   
   // Command and Argument are well formed
   switch(commandChar) {
+    case 'H':
+      homeZ();
+      break;
+      
     case 'R':
       moveAxes(R_AXIS, argument);
       break;
@@ -153,6 +173,33 @@ int parseSerialCommand(String in) {
   
 }
 
+
+// Home the Z axis
+void homeZ() {
+  int maxDist = 10000;
+  for (int i=0; i<maxDist; i++) {
+    if (limitHome() == false) {
+      zAxisMotor->step(1 * ZSCALE, BACKWARD, Z_STEP_MODE);   
+    }    
+  }
+}
+
+
+// Limit Switches
+bool limitHome() {
+  if (digitalRead(SWITCH_ZHOMELIMIT) == LOW) {
+    return true;
+  }
+  return false;
+}
+
+bool limitTop() {
+  if (digitalRead(SWITCH_ZTOPLIMIT) == LOW) {
+    return true;
+  }
+  return false;
+}
+
 // Initialization
 void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
@@ -164,6 +211,10 @@ void setup() {
  
   zAxisMotor->setSpeed(5000);  // Set the Z axis as fast as it will go
   rAxisMotor->setSpeed(10);    // 10 rpm   
+
+  // Initialize limit switch pins
+  pinMode(SWITCH_ZHOMELIMIT, INPUT_PULLUP);
+  pinMode(SWITCH_ZTOPLIMIT, INPUT_PULLUP);
   
   // Console
   Serial.println(SERIAL_SUCCESSFUL_COMMAND);
@@ -175,7 +226,7 @@ void setup() {
 // Main loop
 String serialBuffer;
 void loop() {
-  
+
   // Step 1: When available, Read Serial Data
   while (Serial.available() > 0) {
     // Read one character
