@@ -29,6 +29,7 @@
 // Error messages
 #define SERIAL_WELCOME_MESSAGE        "OpenCT2 Motion Controller"
 #define SERIAL_WELCOME_MESSAGE2       "Format: <char> <int>, where <char> = R,Z and <int> = -255 to 255"
+#define SERIAL_WELCOME_MESSAGE3       "Other commands: H 1 (Home Z axis), L 1 (display limit switch state)"
 #define SERIAL_PARSE_ERROR            "UNRECOGNIZED INPUT"
 #define SERIAL_SUCCESSFUL_COMMAND     "OK"
 #define SERIAL_PROMPT                 "> "
@@ -146,6 +147,10 @@ int parseSerialCommand(String in) {
     case 'H':
       homeZ();
       break;
+
+    case 'L':
+      displayLimitSwitchStates();
+      break;
       
     case 'R':
       moveAxes(R_AXIS, argument);
@@ -161,11 +166,12 @@ int parseSerialCommand(String in) {
       return -1;
       break;       
   }
-  
-  Serial.print("COMMAND: ");
-  Serial.println(command);
-  Serial.print("ARGUMENT: ");
-  Serial.println(argument);
+
+  // For debugging 
+  // Serial.print("COMMAND: ");
+  // Serial.println(command);
+  // Serial.print("ARGUMENT: ");
+  // Serial.println(argument);
   
   // Return success 
   Serial.println (SERIAL_SUCCESSFUL_COMMAND);
@@ -200,11 +206,19 @@ bool limitTop() {
   return false;
 }
 
+void displayLimitSwitchStates() {
+  Serial.print("LIMIT_ZHOME ");
+  Serial.println(limitHome());
+  Serial.print("LIMIT_ZTOP ");
+  Serial.println(limitTop());
+}
+
 // Initialization
 void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
   Serial.println(SERIAL_WELCOME_MESSAGE);
   Serial.println(SERIAL_WELCOME_MESSAGE2);
+  Serial.println(SERIAL_WELCOME_MESSAGE3);
 
   // Initialize stepper driver
   AFMS.begin(4000);  // OR with a different frequency, say 1KHz
