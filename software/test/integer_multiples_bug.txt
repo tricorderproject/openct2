@@ -1,0 +1,45 @@
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 170 -dss 1
+Args: {'digipotstart': '170', 'zlocation': '0', 'inttime': None, 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	170	5	0	0	0	171	587	538	483	636	88	105	121	130	0	0	0	0
+0	170	5	0	0	0	503	2091	2039	1095	2200	245	276	321	324	0	0	0	0
+0	170	5	0	0	0	707	1711	1563	1161	2591	146	247	306	344	0	0	0	0
+0	170	5	0	0	0	223	854	851	823	884	161	164	185	185	0	0	0	0
+0	170	5	0	0	0	611	2650	2612	2283	2752	419	437	462	463	0	0	0	0
+0	170	5	0	0	0	696	3023	3008	2493	3112	372	403	448	490	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': None, 'digipotdelta': None, 'intchunk': None, 'digipotsteps': None}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	0	2	2	0	2	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	1	2	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	438	2278	2247	1991	2351	259	275	300	314	0	0	0	0
+0	171	5	0	0	0	56	342	335	305	346	31	32	34	36	0	0	0	0
+0	171	5	0	0	0	276	1607	1599	1479	1648	138	144	152	156	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': None, 'digipotdelta': None, 'intchunk': None, 'digipotsteps': None}
+Started...
+[' ', 'OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	147	632	626	503	654	92	110	118	125	0	0	0	0
+0	171	5	0	0	0	884	4364	4318	4030	4438	476	491	494	508	0	0	0	0
+0	171	5	0	0	0	133	561	553	526	575	63	66	68	73	0	0	0	0
+0	171	5	0	0	0	8	32	33	21	35	3	2	3	3	0	0	0	0
+0	171	5	0	0	0	3	14	14	13	16	3	4	3	3	0	0	0	0
+0	171	5	0	0	0	37	208	206	189	213	23	25	24	25	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': None, 'digipotdelta': None, 'intchunk': None, 'digipotsteps': None}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	44	230	229	201	244	31	32	36	35	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	264	1361	1353	1282	1378	145	146	148	145	0	0	0	0
+0	171	5	0	0	0	2411	12242	12076	11592	12426	1482	1504	1522	1545	0	0	0	0
+0	171	5	0	0	0	324	1424	1403	1289	1471	164	169	183	174	0	0	0	0
+0	171	5	0	0	0	49	223	220	183	245	25	33	35	34	0	0	0	0
+pi@openct2:~/github/openct2/software/test $
