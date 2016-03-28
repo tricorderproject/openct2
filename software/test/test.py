@@ -31,7 +31,7 @@ def waitForResponse(portname):
 	done = 0;
 	while (done == 0):
 		x = portname.readline();
-		print(" waitForOK: Read " + str(repr(x)));
+		#print(" waitForOK: Read " + str(repr(x)));
 		if (x == 'OK\r\n'):
 			done = 1;			
 		else:
@@ -56,7 +56,7 @@ def sampleDetectors(ser,  intTime):
 	ser.write('I ' + str(intTime) + '\n');
 	resp = waitForResponse(ser);
 	
-	measurements = re.split(r'\t', resp[1]);
+	measurements = re.split(r'\t', resp[1].rstrip());
 	return measurements
 	
 
@@ -70,7 +70,7 @@ def exportHeader():
 	for i in range(0, 16):
 		print("det" + str(i) +"\t", end = "")
 		
-	print("\n")
+	print("")
 
 def exportMeasurements(z, digipotVal, intTime, measurements):
 	print(z, end = "");
@@ -83,7 +83,7 @@ def exportMeasurements(z, digipotVal, intTime, measurements):
 	measurementsStr = '\t'.join(str(x) for x in measurements)
 	print(measurementsStr, end = "");
 	
-	print("\n");
+	print("");
 	
 
 
@@ -177,6 +177,9 @@ def main(argv):
 			exportMeasurements(zLoc, digipotCurrent, intChunk, measurements);
 
 
+	# Close
+	serStepper.close()
+	serImager.close()
 
 
 # Main Program

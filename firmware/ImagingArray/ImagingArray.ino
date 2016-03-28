@@ -33,7 +33,7 @@ uint16_t channelHist[MAX_CHANNELS][MAX_HISTBINS];
 #define SENSOR_INACTIVE 0
 
 // Channel debounce time (in microseconds).  No counts will be made if the last count was within this time. 
-#define SENSOR_DEBOUNCETIME  50
+#define SENSOR_DEBOUNCETIME  150
 
 // Pin Definitions (SPI/Digipot).  These are pin numbers on the MCP23008 I/O expander
 #define DIGIPOT_MOSI  0 
