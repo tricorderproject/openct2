@@ -1,0 +1,37 @@
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 60
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '60', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+Note: 40V supply not enabled for this first capture
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	9	10	8	9	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	1	1	0	1	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	3	24	24	22	30	2	0	0	0	0	0	0	0
+0	171	5	0	0	0	4	27	29	28	40	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	485	3130	3094	2786	3208	96	0	0	0	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 60
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '60', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+Note: 40V supply is enabled for this second capture
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	608	4456	4366	4044	4567	100	0	0	0	0	0	0	0
+0	171	5	0	0	0	372	2365	2322	2083	2450	60	0	0	0	0	0	0	0
+0	171	5	0	0	0	15	117	114	109	121	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	86	439	428	374	456	17	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	1155	6047	5992	5324	6233	176	0	0	0	0	0	0	0
+0	171	5	0	0	0	564	3431	3391	3047	3505	98	0	0	0	0	0	0	0
+0	171	5	0	0	0	361	1840	1810	1573	1917	54	0	0	0	0	0	0	0
+0	171	5	0	0	0	157	977	952	838	1002	27	0	0	0	0	0	0	0
+0	171	5	0	0	0	719	4107	4068	3563	4239	110	0	0	0	0	0	0	0
+0	171	5	0	0	0	90	668	663	590	684	23	0	0	0	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ 

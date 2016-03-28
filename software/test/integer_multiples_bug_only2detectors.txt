@@ -1,0 +1,21 @@
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -inttime 60
+usage: test.py [-h] -z ZLOCATION -dst DIGIPOTSTART [-dss DIGIPOTSTEPS]
+               [-dd DIGIPOTDELTA] [-it INTTIME] [-ic INTCHUNK]
+test.py: error: unrecognized arguments: -inttime 60
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 60
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '60', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	0	0	0	0	5	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	2	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	5	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	3	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	4	1	0	0	0	0	0	0	0

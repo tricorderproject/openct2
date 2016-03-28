@@ -1,0 +1,35 @@
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 30
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '30', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0
+0	171	5	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 30
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '30', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	1	0	1	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0
+pi@openct2:~/github/openct2/software/test $ python test.py -z 0 -dst 171 -dss 1 -it 30
+Args: {'digipotstart': '171', 'zlocation': '0', 'inttime': '30', 'digipotdelta': None, 'intchunk': None, 'digipotsteps': '1'}
+Started...
+Note: Source added, then taken aay after third measurement
+['OpenCT2 Imaging Array Controller\r\n', 'Commands: \r\n', 'Set all digipots: A <1-255>\r\n', 'Set digipot on one channel: D <1-16> <1-255>\r\n', 'Integrate/measure: I <seconds>\r\n', 'Enabling interrupts... \r\n', 'Initialization Complete... \r\n']
+z	digipot	inttime	det0	det1	det2	det3	det4	det5	det6	det7	det8	det9	det10	det11	det12	det13	det14	det15	
+0	171	5	0	0	0	10	6	0	10	6	6	2	8	7	0	0	0	0
+0	171	5	0	0	0	6	7	0	12	7	9	10	6	8	0	0	0	0
+0	171	5	0	0	0	4	9	0	10	6	3	8	6	5	0	0	0	0
+0	171	5	0	0	0	3	2	0	2	1	1	1	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0
+0	171	5	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+pi@openct2:~/github/openct2/software/test $
