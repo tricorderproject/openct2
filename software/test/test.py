@@ -54,6 +54,7 @@ def setDigipotsAll(ser, value):
 
 def sampleDetectors(ser,  intTime):
 	ser.write('I ' + str(intTime) + '\n');
+	sleep(0.5)
 	resp = waitForResponse(ser);
 	
 	measurements = re.split(r'\t', resp[1].rstrip());
@@ -64,26 +65,26 @@ def sampleDetectors(ser,  intTime):
 # Export
 #
 def exportHeader():
-	print("z\t", end = "")
-	print("digipot\t", end = "")
-	print("inttime\t", end = "")
+	os = ""
+	os += "z\t"
+	os += "digipot\t"
+	os += "inttime\t"
 	for i in range(0, 16):
-		print("det" + str(i) +"\t", end = "")
-		
-	print("")
+		os += "det" + str(i) +"\t"
+	
+	return os
+	
 
 def exportMeasurements(z, digipotVal, intTime, measurements):
-	print(z, end = "");
-	print("\t", end = "");
-	print(digipotVal, end = "");
-	print("\t", end = "");
-	print(intTime, end = "");
-	print("\t", end = "");
+	os = ""
+	os += str(z) + "\t"
+	os += str(digipotVal) + "\t"
+	os += str(intTime) + "\t"
 	
 	measurementsStr = '\t'.join(str(x) for x in measurements)
-	print(measurementsStr, end = "");
+	os += measurementsStr
 	
-	print("");
+	return os
 	
 
 
@@ -159,9 +160,12 @@ def main(argv):
 	resp = waitForResponse(serImager);
 	print(resp)
 
+	# Open output file
+	fp = open('out.txt', 'w')
 
 	# Display header
-	exportHeader();
+	print( exportHeader() )
+	print( exportHeader(), file = fp )
 	
 	numIter = intTime/intChunk
 	digipotDeltaSign = digipotDelta / abs(digipotDelta)
@@ -173,14 +177,17 @@ def main(argv):
 
 		for iter in range(0, numIter):	
 			sleep(0.5)
-			measurements = sampleDetectors(serImager, intChunk);	
-			exportMeasurements(zLoc, digipotCurrent, intChunk, measurements);
+			measurements = sampleDetectors(serImager, intChunk)	
+			print( exportMeasurements(zLoc, digipotCurrent, intChunk, measurements) )
+			print( exportMeasurements(zLoc, digipotCurrent, intChunk, measurements), file = fp )
+			fp.flush();
 
 
 	# Close
 	serStepper.close()
 	serImager.close()
 
+	fp.close()
 
 # Main Program
 if __name__ == "__main__":
