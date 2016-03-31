@@ -26,36 +26,71 @@ def initializeSerial(deviceLoc):
 #
 # Serial Port I/O
 #
-def waitForResponse(portname):
-	response = [];
-	done = 0;
+def waitForResponse(portname, timeoutSec = 10):
+	response = []
+	done = 0
+	error = 0
+	numSec = 0
 	while (done == 0):
 		x = portname.readline();
-		#print(" waitForOK: Read " + str(repr(x)));
+		print(" waitForOK: Read " + str(repr(x)));
 		if (x == 'OK\r\n'):
-			done = 1;			
+			done = 1		
+		elif (x == 'UNRECOGNIZED INPUT\r\n'):
+			error = 1
+			done = 1
 		else:
 			if (len(x) > 0):
 				response.append(x);
+		
+		# Timeout (in seconds)		
+		if (numSec > timeoutSec):
+			error = 1
+			done = 1
+			
+		numSec += 1
 			
 			
 	
-	return response;
+	return (error, response)
 
 
+
+def sendCommand(ser, command, timeoutSec = 10, maxRetries = 10):
+	resp = []
+	errorCode = 1
+	numRetries = 0
+	while ((errorCode != 0) and (numRetries < maxRetries)): 
+		ser.write(command)
+		sleep(0.5)
+
+		(errorCode, resp) = waitForResponse(ser, timeoutSec)
+		if (errorCode == 1):
+			print("Communications Error: Retrying...")
+			sleep(1.0)
+			numRetries += 1
+
+	return (errorCode, resp)
+	 
 
 #
 # Imaging array commands
 # 
 def setDigipotsAll(ser, value):
-	ser.write('A ' + str(value) + '\n');
-	resp = waitForResponse(ser);
+	command = 'A ' + str(value) + '\n'
+	(errorCode, resp) = sendCommand(ser, command, 5)
+	if (errorCode != 0):
+		print("Communications error: exiting...")
+		sys.exit(1)
+	
 	
 
 def sampleDetectors(ser,  intTime):
-	ser.write('I ' + str(intTime) + '\n');
-	sleep(0.5)
-	resp = waitForResponse(ser);
+	command = 'I ' + str(intTime) + '\n'
+	(errorCode, resp) = sendCommand(ser, command, intTime+5)
+	if (errorCode != 0):
+		print("Communications error: exiting...")
+		sys.exit(1)
 	
 	measurements = re.split(r'\t', resp[1].rstrip());
 	return measurements
@@ -157,7 +192,7 @@ def main(argv):
 
 	print("Started...")
 	# Clear buffer
-	resp = waitForResponse(serImager);
+	(errorCode, resp) = waitForResponse(serImager);
 	print(resp)
 
 	# Open output file
