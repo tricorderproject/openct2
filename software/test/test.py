@@ -182,7 +182,7 @@ def main(argv):
 	if (args['inttime'] != None):
 		intTime = int( args['inttime'] )
 	if (args['intchunk'] != None):
-		digipotSteps = int( args['intchunk'] )
+		intChunk = int( args['intchunk'] )
 			
 
 
