@@ -14,6 +14,7 @@
 // Pin Definitions
 #define SWITCH_ZHOMELIMIT   12
 #define SWITCH_ZTOPLIMIT    13
+#define RELAY_VBIAS         10
 
 // Constants
 #define Z_AXIS  1
@@ -151,6 +152,10 @@ int parseSerialCommand(String in) {
     case 'L':
       displayLimitSwitchStates();
       break;
+
+    case 'V':
+      setVBiasRelay(argument);
+      break;
       
     case 'R':
       moveAxes(R_AXIS, argument);
@@ -213,6 +218,19 @@ void displayLimitSwitchStates() {
   Serial.println(limitTop());
 }
 
+
+// VBIAS Relay
+void setVBiasRelay(int state) {
+  if (state == 1) {
+    digitalWrite(RELAY_VBIAS, HIGH);
+    Serial.println("Enabling...");
+  } else {
+    digitalWrite(RELAY_VBIAS, LOW);
+    Serial.println("Disabling...");
+  }
+}
+
+
 // Initialization
 void setup() {
   Serial.begin(9600);           // set up Serial library at 9600 bps
@@ -220,16 +238,20 @@ void setup() {
   Serial.println(SERIAL_WELCOME_MESSAGE2);
   Serial.println(SERIAL_WELCOME_MESSAGE3);
 
+  // Initialize limit switch pins
+  pinMode(SWITCH_ZHOMELIMIT, INPUT_PULLUP);
+  pinMode(SWITCH_ZTOPLIMIT, INPUT_PULLUP);
+
+  // Initialize VBIAS Pins
+  pinMode(RELAY_VBIAS, OUTPUT);
+  setVBiasRelay(1);     // Enable VBIAS source relay by default
+ 
   // Initialize stepper driver
   AFMS.begin(4000);  // OR with a different frequency, say 1KHz
  
   zAxisMotor->setSpeed(5000);  // Set the Z axis as fast as it will go
   rAxisMotor->setSpeed(10);    // 10 rpm   
 
-  // Initialize limit switch pins
-  pinMode(SWITCH_ZHOMELIMIT, INPUT_PULLUP);
-  pinMode(SWITCH_ZTOPLIMIT, INPUT_PULLUP);
-  
   // Console
   Serial.println(SERIAL_SUCCESSFUL_COMMAND);
   Serial.print(SERIAL_PROMPT);

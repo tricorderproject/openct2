@@ -130,7 +130,9 @@ void setCS(uint8_t channel, uint8_t value) {
   channelMap[5] = 2;
   channelMap[6] = 1;
   channelMap[7] = 0;
-  
+
+  //## Note, below may be in reversed order
+  /*
   channelMap[8] = 15;
   channelMap[9] = 14;
   channelMap[10] = 13;
@@ -139,6 +141,16 @@ void setCS(uint8_t channel, uint8_t value) {
   channelMap[13] = 10;
   channelMap[14] = 9;
   channelMap[15] = 8;
+*/
+  channelMap[8] = 8;
+  channelMap[9] = 9;
+  channelMap[10] = 10;
+  channelMap[11] = 11;
+  channelMap[12] = 12;
+  channelMap[13] = 13;
+  channelMap[14] = 14;
+  channelMap[15] = 15;
+
   
   IOExpander.digitalWrite(channelMap[channel], value);
   

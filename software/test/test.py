@@ -73,6 +73,7 @@ def sendCommand(ser, command, timeoutSec = 10, maxRetries = 10):
 	return (errorCode, resp)
 	 
 
+
 #
 # Imaging array commands
 # 
