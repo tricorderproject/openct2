@@ -1,7 +1,7 @@
 from __future__ import print_function
 import sys, getopt
 import re
-import serial
+#import serial
 import argparse
 from time import sleep
 from collections import defaultdict
