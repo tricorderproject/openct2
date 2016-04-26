@@ -166,8 +166,8 @@ def main(argv):
 	parser.add_argument('-dss', '--digipotsteps', help="Scan digipot value through this many values", required = False);
 	parser.add_argument('-dd', '--digipotdelta', help="Delta value to scan digipot each step", required = False);
 	parser.add_argument('-it', '--inttime', help="Total integration time per digipot value", required = False);
-	parser.add_argument('-ic', '--intchunk', help="Total integration time is divided into chunks of this many seconds", required = False);
-	
+	parser.add_argument('-ic', '--intchunk', help="Total integration time is divided into chunks of this many seconds", required = False);	
+	parser.add_argument('-o', '--outfile', help="Output filename", required = True);
 	
 	args = vars(parser.parse_args())
 	print("Args: " + str(args))
@@ -184,6 +184,9 @@ def main(argv):
 		intTime = int( args['inttime'] )
 	if (args['intchunk'] != None):
 		intChunk = int( args['intchunk'] )
+	if (args['outfile'] != None):
+		outputFilename = args['outfile']
+		
 			
 
 
@@ -197,7 +200,7 @@ def main(argv):
 	print(resp)
 
 	# Open output file
-	fp = open('out.txt', 'w')
+	fp = open(outputFilename, 'w')
 
 	# Display header
 	print( exportHeader() )
