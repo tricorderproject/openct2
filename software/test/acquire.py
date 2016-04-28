@@ -174,7 +174,7 @@ def sampleDetectors(ser,  intTime):
 def exportHeader():
 	os = ""
 	os += "z\t"
-	os += "digipot\t"
+	os += "r\t"
 	os += "inttime\t"
 	for i in range(0, 16):
 		os += "det" + str(i) +"\t"
