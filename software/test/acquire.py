@@ -127,7 +127,20 @@ def moveZAxisAbsolute(ser, value):
 
 		# Recalculate delta
 		delta = value - currentZLocation
-			
+
+def moveRAxisRelative(ser, value):
+	global currentRLocation
+	
+	command = 'R ' + str(value) + '\n'
+	(errorCode, resp) = sendCommand(ser, command, 10)
+	if (errorCode != 0):
+		print("Communications error: exiting...")
+		sys.exit(1)
+	
+	if (currentRLocation == -1): 
+		currentRLocation = 0
+	currentRLocation += value
+
 
 
 #
@@ -237,6 +250,8 @@ def main(argv):
 	zStart = 0
 	zSteps = 1
 	zDelta = 0
+	rSteps = 1
+	rDelta = 0
 	digipotStart = 175
 	digipotDelta = -1
 	digipotSteps = 1
@@ -251,7 +266,9 @@ def main(argv):
 	parser = argparse.ArgumentParser(description='description');
 	parser.add_argument('-z', '--zlocation', help="Move to this Z axis level before scan", required = True);
 	parser.add_argument('-zs', '--zsteps', help="Number of positions to measure on the Z axis", required = False)
-	parser.add_argument('-zd', '--zdelta', help="Distance (in steps) to move Z axis after each position", required = False)	
+	parser.add_argument('-zd', '--zdelta', help="Distance (in steps) to move Z axis after each position", required = False)
+	parser.add_argument('-rs', '--rsteps', help="Number of positions to measure on the R axis", required = False)
+	parser.add_argument('-rd', '--rdelta', help="Distnace (in steps) to move R axis after each position", required = False)
 	parser.add_argument('-idc', '--digipotcalibfile', help="Digipot calibration file (tab delimited)", required = True);
 	parser.add_argument('-it', '--inttime', help="Total integration time per digipot value", required = False);
 	parser.add_argument('-ic', '--intchunk', help="Total integration time is divided into chunks of this many seconds", required = False);	
@@ -276,6 +293,10 @@ def main(argv):
 	if (args['zdelta'] != None):
 		zDelta = int(args['zdelta'])
 		
+	if (args['rsteps'] != None):
+		rSteps = int(args['rsteps'])
+	if (args['rdelta'] != None):
+		rDelta = int(args['rdelta'])
 			
 
 
@@ -307,18 +328,24 @@ def main(argv):
 		
 	# Read data
 	numIter = intTime/intChunk
-	for zIter in range(0, zSteps):
-		newZLoc = zStart + (zDelta * zIter)
-		print("Moving to Z = " + str(newZLoc))
-		moveZAxisAbsolute(serStepper, newZLoc)
+	
+	for rIter in range(0, rSteps): 
+		if (rIter > 0):
+			moveRAxisRelative(serStepper, rDelta)
 		
-		for iter in range(0, numIter):	
-			sleep(0.5)
-			measurements = sampleDetectors(serImager, intChunk)	
-			print( exportMeasurements(currentZLocation, currentRLocation, intChunk, measurements) )
-			print( exportMeasurements(currentZLocation, currentRLocation, intChunk, measurements), file = fp )
-			fp.flush();
+		for zIter in range(0, zSteps):
+			newZLoc = zStart + (zDelta * zIter)
+			print("Moving to Z = " + str(newZLoc))
+			moveZAxisAbsolute(serStepper, newZLoc)
+		
+			for iter in range(0, numIter):	
+				sleep(0.5)
+				measurements = sampleDetectors(serImager, intChunk)	
+				print( exportMeasurements(currentZLocation, currentRLocation, intChunk, measurements) )
+				print( exportMeasurements(currentZLocation, currentRLocation, intChunk, measurements), file = fp )
+				fp.flush();
 
+		
 
 	# Close
 	serStepper.close()
